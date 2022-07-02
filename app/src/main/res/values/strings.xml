@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">JBF Library</string>
+    <string name="are_you_sure_to_want_to_exit_application">Are you sure to want to exit application?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="plase">Please Wait...</string>
+    <string name="pleae_enter_user_name">Please enter user name.</string>
+    <string name="pleae_enter_password">Please enter password.</string>
+
+    <string name="my_account">My Account</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="please_enter_valid_contact_number">Please Enter Valid Contact Number!</string>
+    <string name="please_enter_valid_email_id">Please Enter Valid Email Id!</string>
+    <string name="please_enter_brief_description">Please Enter Brief Description</string>
+
+    <string name="please_select_gender">Please Select Gender!</string>
+    <string name="please_enter_valid_date_of_birth">Please Enter Valid  Date of Birth!</string>
+    <string name="please_enter_name">Please Enter Name!</string>
+    <string name="please_enter_author_name">Please Enter Author Name!</string>
+    <string name="please_enter_title_of_the_book_name">Please Enter Title Of The Book Name!</string>
+    <string name="please_enter_issue_date">Please Enter Issue Date!</string>
+
+    <string name="please_enter_address">Please Enter Address!</string>
+    <string name="please_enter_donor_name">Please Enter Donor Name!</string>
+
+    <string name="please_enter_valid_emailId">Please Enter Valid EmailId!</string>
+
+    <string name="mr_rama_sankar_tiwari">Mr. Rama Sankar Tiwari</string>
+    <string name="ramayana">Ramayana</string>
+
+</resources>
