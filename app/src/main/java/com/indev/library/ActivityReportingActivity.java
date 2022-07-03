@@ -2,11 +2,13 @@ package com.indev.library;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -14,10 +16,24 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.indev.library.Model.ActivityReportingPojo;
+import com.indev.library.RestAPI.ClientAPI;
+import com.indev.library.RestAPI.Library_API;
 import com.indev.library.SqliteHelper.SqliteDatabase;
+import com.indev.library.utils.CommonClass;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ActivityReportingActivity extends AppCompatActivity {
     Spinner sp_activity_reporting;
@@ -27,6 +43,7 @@ public class ActivityReportingActivity extends AppCompatActivity {
     private static final int CAMERA_REQUEST=1888;
     SqliteDatabase sqliteDatabase;
     String base64="";
+    ProgressDialog dialog;
     String[] str_activity = {"Select Activity Reporting", "Story telling", "Story writing","Exhibition","Other"};
 
 
@@ -62,16 +79,29 @@ public class ActivityReportingActivity extends AppCompatActivity {
               sqliteDatabase.Reporting(activityReportingPojo);
 
 
+              long local_id = sqliteDatabase.Reporting(activityReportingPojo);
+              if (CommonClass.isInternetOn(getApplicationContext())) {
+                  Gson gson = new Gson();
+                  String data = gson.toJson(activityReportingPojo);
+                  MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+                  RequestBody body = RequestBody.create(JSON, data);
+                  addreporting(body, String.valueOf(local_id));
+                  Log.e("reporting", "Add Activity Successfully: " + data);
+              }
+              else
+              {
+
               Toast.makeText(getApplicationContext(),"Add Success",Toast.LENGTH_SHORT).show();
               Intent intent=new Intent(ActivityReportingActivity.this,ReportingListActivity.class);
               intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
               intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
               startActivity(intent);
           }
+      }
       });
 
+      }
 
-    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -86,6 +116,47 @@ public class ActivityReportingActivity extends AppCompatActivity {
                 imageView_profile1.setImageBitmap(photo);
             }
         }
+    }
+
+    private void addreporting(RequestBody body, String lid) {
+        dialog = ProgressDialog.show(this, "", "Please wait...", true);
+        ClientAPI.getClient().create(Library_API.class).Reporting(body).enqueue(new Callback<JsonObject>(){
+
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response.body().toString());
+                    Log.e("TAG", "onResponse: " + jsonObject.toString() );
+                    String status = jsonObject.optString("status");
+                    String message = jsonObject.optString("message");
+                    String last_book_id = jsonObject.optString("last_activity_id");
+                    if(status.equals("1"))
+                    {
+                        sqliteDatabase.update("resource", "local_id='" + lid + "'", last_book_id, "resource_id");
+                        Toast.makeText(getApplicationContext(), ""+message, Toast.LENGTH_SHORT).show();
+                        Intent intent  = new Intent(ActivityReportingActivity.this, ReportingListActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(ActivityReportingActivity.this, "Not Reporting", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    dialog.dismiss();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                Toast.makeText(ActivityReportingActivity.this, "Fail", Toast.LENGTH_SHORT).show();
+                Log.e("Reporting", "Failure" + t + "," + call);
+                dialog.dismiss();
+            }
+        });
+
     }
     private String encodeTobase64(Bitmap image) {
         ByteArrayOutputStream byteArrayOS = null;

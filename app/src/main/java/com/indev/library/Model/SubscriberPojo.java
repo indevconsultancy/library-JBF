@@ -4,9 +4,8 @@ public class SubscriberPojo
 {
     private String local_id;
     private String subscriber_id;
-
     private String user_id;
-   private  String subscriber_unique_id;
+    private  String subscriber_unique_id;
     private String subscriber_name;
     private String subscriber_image;
     private String date_of_birth;
@@ -208,8 +207,8 @@ public class SubscriberPojo
 
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +"("
             + COLUMN_LOCAL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            +COLUMN_SUBSCRIBER_ID + " INTEGER, "
-            +COLUMN_USER_ID + " INTEGER, "
+            + COLUMN_SUBSCRIBER_ID + " INTEGER, "
+            + COLUMN_USER_ID + " INTEGER, "
             + COLUMN_SUBSCRIBER_NAME + " TEXT, "
             + COLUMN_EMAIL + " TEXT, "
             + COLUMN_GENDER + " TEXT, "
