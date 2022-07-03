@@ -9,50 +9,20 @@
     android:orientation="vertical">
 
     <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/chart1"
+        android:id="@+id/chart2"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="630sp"
         tools:ignore="MissingConstraints" />
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/next"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/itcavantagradestdbk"
-            android:text="Standerd Wise Subscriber"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:background="#245B75"
-            tools:ignore="MissingConstraints" />
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/chart2"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="280dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/itcavantagradestdbk"
-            android:text="Category wise Book"/>
-        <Button
-            android:id="@+id/next"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="289dp"
-            android:fontFamily="@font/itcavantagradestdbk"
-            android:layout_marginBottom="5dp"
-            android:text="Next"
-            />
-    </LinearLayout>
+        android:layout_marginLeft="289dp"
+        android:fontFamily="@font/itcavantagradestdbk"
+        android:layout_marginBottom="12dp"
+        android:text="Next"
+        />
+
 
 
 </LinearLayout>

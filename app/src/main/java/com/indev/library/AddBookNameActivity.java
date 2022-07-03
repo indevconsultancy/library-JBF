@@ -108,6 +108,7 @@ public class AddBookNameActivity extends AppCompatActivity {
                     addBookPojo.setLanguage_id(String.valueOf(language_id));
                     addBookPojo.setSource_id(String.valueOf(resource_id));
                     addBookPojo.setLibrary_id(String.valueOf(library_id));
+                    sharedPrefHelper.setString("librarId", String.valueOf(library_id));
                     addBookPojo.setLibrarain_id(sharedPrefHelper.getString("librarain_id", ""));
                     addBookPojo.setCategory_id(String.valueOf(category_id));
                     addBookPojo.setAuthor_name(et_authour_name.getText().toString().trim());

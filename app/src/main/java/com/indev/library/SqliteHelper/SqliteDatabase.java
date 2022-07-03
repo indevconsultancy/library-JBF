@@ -166,13 +166,12 @@ public class SqliteDatabase extends SQLiteOpenHelper
 //                values.put("local_id",householdMasterModel.getLocal_id());
                 values.put("subscriber_id",householdMasterModel.getSubscriber_id());
                 values.put("subscriber_name",householdMasterModel.getSubscriber_name());
-
                 values.put("subscriber_unique_id",householdMasterModel.getSubscriber_unique_id());
                 values.put("gender",householdMasterModel.getGender());
                 values.put("librarain_id",householdMasterModel.getLibrarain_id());
                 values.put("latitu",householdMasterModel.getLatitu());
                 values.put("longitu",householdMasterModel.getLongitu());
-
+                values.put("library_id",householdMasterModel.getLibrary_id());
                 values.put("email",householdMasterModel.getEmail());
                 values.put("category_id",householdMasterModel.getCategory_id());
                 values.put("subscriber_image",householdMasterModel.getSubscriber_image());
@@ -347,6 +346,188 @@ public class SqliteDatabase extends SQLiteOpenHelper
             sum = cursor.getString(cursor.getColumnIndex("total_book"));
         return sum;
     }
+    @SuppressLint("Range")
+    public String getQualificationPieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification1PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 1",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification2PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 2",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification3PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 3",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification4PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 4",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification5PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 5",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification6PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 6",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification7PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 7",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification8PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 8",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getQualification9PieChart() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_qualification from subscriber where category_id is 9",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_qualification"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getEnglishCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 1",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getHindiCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 2",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getBangaliCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 3",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getOdiaCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 4",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getPunjabiCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 5",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getMarathiCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 6",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getTamilCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_language from resource where language_id is 7",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_language"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getStoryCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_category from resource where category_id is 1",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_category"));
+        return sum;
+    }
+
+    @SuppressLint("Range")
+    public String getNovelCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_category from resource where category_id is 2",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_category"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getComicsCount() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_category from resource where category_id is 3",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_category"));
+        return sum;
+    }
+
     @SuppressLint("Range")
     public String getGenderCount() {
         String sum = "";

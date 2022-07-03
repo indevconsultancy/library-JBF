@@ -21,13 +21,17 @@
         android:theme="@style/Theme.JBFLibrary"
         tools:targetApi="31">
         <activity
-            android:name=".DashBoardLastActivity"
-            android:parentActivityName=".DashBoardBaarChartActivity"
+            android:name=".BarChartLast1Activity"
+            android:parentActivityName=".DashBoardLastActivity"
             android:exported="false" />
         <activity
+            android:name=".DashBoardLastActivity"
+            android:exported="false"
+            android:parentActivityName=".DashBoardBaarChartActivity" />
+        <activity
             android:name=".DashBoardBaarChartActivity"
-            android:parentActivityName=".DashBoardActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".DashBoardActivity" />
         <activity
             android:name=".DashBoardActivity"
             android:exported="false"

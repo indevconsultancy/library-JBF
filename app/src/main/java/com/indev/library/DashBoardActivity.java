@@ -53,6 +53,8 @@ public class DashBoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(DashBoardActivity.this,DashBoardBaarChartActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -230,7 +232,7 @@ public class DashBoardActivity extends AppCompatActivity {
         pieChart1=findViewById(R.id.activity_main_piechart1);
         pieChart2=findViewById(R.id.activity_main_piechart2);
         next=findViewById(R.id.next);
-        //All Method Call
+        //All Method
 
     }
     private String getAge(int year, int month, int day){

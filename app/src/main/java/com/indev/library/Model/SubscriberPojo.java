@@ -18,9 +18,17 @@ public class SubscriberPojo
     private String librarain_id;
     private String latitu;
     private String longitu;
+    private String library_id;
     private String flag;
 
 
+    public String getLibrary_id() {
+        return library_id;
+    }
+
+    public void setLibrary_id(String library_id) {
+        this.library_id = library_id;
+    }
 
     public String getFlag() {
         return flag;
@@ -187,6 +195,7 @@ public class SubscriberPojo
     private static final String COLUMN_GENDER= "gender";
     private static final String COLUMN_CATEGORY_ID= "category_id";
     private static final String COLUMN_LIBRARAIN_ID= "librarain_id";
+    private static final String COLUMN_LIBRARY_ID= "library_id";
     private static final String COLUMN_LATITU= "latitu";
     private static final String COLUMN_LONGITU= "longitu";
 
@@ -205,6 +214,7 @@ public class SubscriberPojo
             + COLUMN_EMAIL + " TEXT, "
             + COLUMN_GENDER + " TEXT, "
             + COLUMN_LIBRARAIN_ID + " TEXT, "
+            + COLUMN_LIBRARY_ID + " TEXT, "
             + COLUMN_LATITU + " TEXT, "
             + COLUMN_LONGITU + " TEXT, "
             + COLUMN_FLAG + " TEXT, "

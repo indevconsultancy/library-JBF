@@ -174,6 +174,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
                     subscriberPojo.setGender(st_gender);
                     subscriberPojo.setCategory_id(String.valueOf(category_id));
                     subscriberPojo.setLibrarain_id(sharedPrefHelper.getString("librarain_id", ""));
+                    subscriberPojo.setLibrary_id(sharedPrefHelper.getString("librarId", ""));
 
                     subscriberPojo.setEmail(et_email.getText().toString().trim());
                     subscriberPojo.setDate_of_birth(et_date_of_birth.getText().toString().trim());
