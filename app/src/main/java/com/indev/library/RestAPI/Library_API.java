@@ -34,7 +34,7 @@ public interface Library_API
     @POST("user_login.php")
     Call<JsonObject> LoginApi(@Body RequestBody body);
 
-    @POST("user_login.php")
+    @POST("add_activity_reporting.php")
     Call<JsonObject> Reporting(@Body RequestBody body);
 
 }

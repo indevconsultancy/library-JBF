@@ -104,9 +104,11 @@ public class SqliteDatabase extends SQLiteOpenHelper
             {
                 ContentValues values =new ContentValues();
                 values.put("id",householdMasterModel.getId());
-                values.put("reporting",householdMasterModel.getReporting());
-                values.put("photo",householdMasterModel.getPhoto());
-//                values.put("status", "0");
+                values.put("activity_id",householdMasterModel.getActivity_id());
+                values.put("librarain_id",householdMasterModel.getLibrarain_id());
+                values.put("activity_image",householdMasterModel.getActivity_image());
+                //values.put("librarain_id",householdMasterModel.getLibrarain_id());
+                values.put("status", "0");
 
                 ids =DB.insert("reporting",null, values);
                 DB.close();
@@ -139,8 +141,10 @@ public class SqliteDatabase extends SQLiteOpenHelper
 
                         ActivityReportingPojo list = new ActivityReportingPojo();
                         list.setId(cursor.getString(cursor.getColumnIndex("id")));
-                        list.setReporting(cursor.getString(cursor.getColumnIndex("reporting")));
-                        list.setPhoto(cursor.getString(cursor.getColumnIndex("photo")));
+                        list.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
+                        list.setLibrarain_id(cursor.getString(cursor.getColumnIndex("librarain_id")));
+                        list.setActivity_image(cursor.getString(cursor.getColumnIndex("activity_image")));
+                        list.setStatus(cursor.getString(cursor.getColumnIndex("status")));
                         activityReportingPojoArrayList.add(list);
                         cursor.moveToNext();
                     }
@@ -1003,7 +1007,31 @@ public class SqliteDatabase extends SQLiteOpenHelper
         }
         return registrationPojo;
     }
-    public long update(String table, String whr, String last_book_id, String col) {
+    public long updateReporting(String table, String whr, String last_activity_id, String col) {
+        long reporting_id = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+                ContentValues values = new ContentValues();
+                values.put("status", "1");
+                //values.put("flag", "1");
+                values.put(col, last_activity_id);
+                reporting_id = db.update(table, values, whr, null);
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return reporting_id;
+    }
+
+    public long update(String table, String whr, String last_activity_id, String col) {
         long book_id = 0;
         SQLiteDatabase db = this.getWritableDatabase();
         try
@@ -1013,7 +1041,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
                 ContentValues values = new ContentValues();
                 values.put("status", "1");
                 values.put("flag", "1");
-                values.put(col, last_book_id);
+                values.put(col, last_activity_id);
                 book_id = db.update(table, values, whr, null);
 
                 db.close();

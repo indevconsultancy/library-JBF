@@ -74,30 +74,31 @@ public class ActivityReportingActivity extends AppCompatActivity {
           @Override
           public void onClick(View view) {
               activityReportingPojo=new ActivityReportingPojo();
-              activityReportingPojo.setReporting(sp_activity_reporting.getSelectedItem().toString());
-              activityReportingPojo.setPhoto( base64);
+              activityReportingPojo.setActivity_id(sp_activity_reporting.getSelectedItem().toString());
+              activityReportingPojo.setLibrarain_id("1");
+              activityReportingPojo.setActivity_image( base64);
               sqliteDatabase.Reporting(activityReportingPojo);
 
 
               long local_id = sqliteDatabase.Reporting(activityReportingPojo);
-              if (CommonClass.isInternetOn(getApplicationContext())) {
+//              if (CommonClass.isInternetOn(getApplicationContext())) {
                   Gson gson = new Gson();
                   String data = gson.toJson(activityReportingPojo);
                   MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                   RequestBody body = RequestBody.create(JSON, data);
                   addreporting(body, String.valueOf(local_id));
                   Log.e("reporting", "Add Activity Successfully: " + data);
-              }
-              else
-              {
+//              }
+//              else
+//              {
 
               Toast.makeText(getApplicationContext(),"Add Success",Toast.LENGTH_SHORT).show();
-              Intent intent=new Intent(ActivityReportingActivity.this,ReportingListActivity.class);
-              intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-              intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-              startActivity(intent);
+//              Intent intent=new Intent(ActivityReportingActivity.this,ReportingListActivity.class);
+//              intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//              intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//              startActivity(intent);
           }
-      }
+
       });
 
       }
@@ -129,10 +130,10 @@ public class ActivityReportingActivity extends AppCompatActivity {
                     Log.e("TAG", "onResponse: " + jsonObject.toString() );
                     String status = jsonObject.optString("status");
                     String message = jsonObject.optString("message");
-                    String last_book_id = jsonObject.optString("last_activity_id");
+                    String last_activity_id = jsonObject.optString("last_activity_id");
                     if(status.equals("1"))
                     {
-                        sqliteDatabase.update("resource", "local_id='" + lid + "'", last_book_id, "resource_id");
+                        sqliteDatabase.updateReporting("reporting", "local_id='" + lid + "'", last_activity_id, "id");
                         Toast.makeText(getApplicationContext(), ""+message, Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(ActivityReportingActivity.this, ReportingListActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -58,17 +58,17 @@ public class AdapterReporting extends RecyclerView.Adapter<AdapterReporting.View
 
 
 
-        holder.txt_reporting.setText(arrayList.get(position).getReporting());
+        holder.txt_reporting.setText(arrayList.get(position).getActivity_image());
 
-        if (arrayList.get(position).getPhoto() != null && arrayList.get(position).getPhoto().length() > 200) {
-            byte[] decodedString = Base64.decode(arrayList.get(position).getPhoto(), Base64.NO_WRAP);
+        if (arrayList.get(position).getActivity_image() != null && arrayList.get(position).getActivity_image().length() > 200) {
+            byte[] decodedString = Base64.decode(arrayList.get(position).getActivity_image(), Base64.NO_WRAP);
             InputStream inputStream = new ByteArrayInputStream(decodedString);
             Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
             holder.img_reporting.setImageBitmap(bitmap);
         } else {
             try {
                 Picasso.get()
-                        .load(IMAGE_BASE_URL+arrayList.get(position).getPhoto())
+                        .load(IMAGE_BASE_URL+arrayList.get(position).getActivity_image())
                         .placeholder(R.drawable.camera)
                         .into(holder.img_reporting);
             }catch (Exception e){
