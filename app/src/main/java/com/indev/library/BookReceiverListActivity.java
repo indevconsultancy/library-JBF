@@ -25,6 +25,7 @@ import com.indev.library.RestAPI.ClientAPI;
 import com.indev.library.RestAPI.Library_API;
 import com.indev.library.SqliteHelper.SharedPrefHelper;
 import com.indev.library.SqliteHelper.SqliteDatabase;
+import com.indev.library.utils.CommonClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -76,13 +77,14 @@ public class BookReceiverListActivity extends AppCompatActivity {
             public void itemClick(String transaction_id, String currentDate, int clickStatus, int position) {
                  bookIssuePojo.setTransaction_id(transaction_id);
                  bookIssuePojo.setRecieved_date(currentDate);
-
+            if(CommonClass.isInternetOn(context)) {
                 Gson gson = new Gson();
                 String data = gson.toJson(bookIssuePojo);
                 MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                 RequestBody body = RequestBody.create(JSON, data);
-                addBookIssueRegistration(body);
+                addBookIssueRegistration(body, position);
                 Log.e("transaction_book", "registration: " + data);
+            }
 
             }
         });
@@ -156,7 +158,7 @@ public class BookReceiverListActivity extends AppCompatActivity {
         finish();
     }
 
-    private void addBookIssueRegistration(RequestBody body) {
+    private void addBookIssueRegistration(RequestBody body,int position) {
         dialog = ProgressDialog.show(this, "", "Please wait...", true);
         ClientAPI.getClient().create(Library_API.class).UpdateReturnBook(body).enqueue(new Callback<JsonObject>(){
 
@@ -171,6 +173,8 @@ public class BookReceiverListActivity extends AppCompatActivity {
 
                     if(status.equals("1"))
                     {
+                        sqliteDatabase.ReturnBookFlagUpdate("transaction_book"," local_id='" + arrayList.get(position).getLocal_id()+"'","1");
+
 //                        Toast.makeText(getApplicationContext(), ""+message, Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }

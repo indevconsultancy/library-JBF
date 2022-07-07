@@ -21,9 +21,15 @@
         android:theme="@style/Theme.JBFLibrary"
         tools:targetApi="31">
         <activity
-            android:name=".BarChartLast1Activity"
-            android:parentActivityName=".DashBoardLastActivity"
+            android:name=".DeleteSubscriberActivity"
             android:exported="false" />
+        <activity
+            android:name=".DeleteBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BarChartLast1Activity"
+            android:exported="false"
+            android:parentActivityName=".DashBoardLastActivity" />
         <activity
             android:name=".DashBoardLastActivity"
             android:exported="false"
@@ -38,12 +44,15 @@
             android:parentActivityName=".MainMenuActivity" />
         <activity
             android:name=".SyncronizeActivity"
+            android:parentActivityName=".MainMenuActivity"
             android:exported="false" />
         <activity
             android:name=".ReportingListActivity"
+            android:parentActivityName=".MainMenuActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityReportingActivity"
+            android:parentActivityName=".ReportingListActivity"
             android:exported="false" />
         <activity
             android:name=".ForgetPasswordActivity"

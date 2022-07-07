@@ -20,7 +20,6 @@ public class AddBookPojo
     private String category_id;
     private String status;
     private  String no_of_days_book_issued;
-
     private String flag;
     private String remark;
 

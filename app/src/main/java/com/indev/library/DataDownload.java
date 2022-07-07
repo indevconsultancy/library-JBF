@@ -29,7 +29,7 @@ public class DataDownload
 {
 
 
-    private String[] tables = {"qualification","book_category","library","language","sources_of_resource"};
+    private String[] tables = {"qualification","book_category","library","language","activity_list","sources_of_resource"};
     SharedPrefHelper sharedPrefHelper;
     //ProgressDialog dialog;
     Context context;

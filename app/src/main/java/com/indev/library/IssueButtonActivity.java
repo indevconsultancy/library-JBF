@@ -1,5 +1,7 @@
 package com.indev.library;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -45,6 +47,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import okhttp3.MediaType;
@@ -75,10 +78,11 @@ public class IssueButtonActivity extends AppCompatActivity {
     String subscriber_idd = "";
     String local_id="";
     ProgressDialog dialog;
-
+    String issue_date="";
     String st_book_name = "", book_qty="";
     private String type="",screen_type="";
     boolean isEditable = false;
+    String date="";
     SharedPrefHelper sharedPrefHelper;
 
     @Override
@@ -95,15 +99,21 @@ public class IssueButtonActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             st_book_name = bundle.getString("resourse_name", "");
-
+            sharedPrefHelper.setString("book_name",st_book_name);
             local_id = bundle.getString("local_id", "");
             sharedPrefHelper.setString("local_id","");
             book_qty = bundle.getString("book_qty", "");
 //            bookIdList = sqliteDatabase.getBookId(st_book_name);
+//            new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
 
         }
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String formattedDate = df.format(c);
+        et_issue_date.setText(formattedDate);
+        Log.e(TAG, "onatedate: "+formattedDate );
 
-         getResourceSpinner();
+        getResourceSpinner();
          getSubscriberSpinner();
 
 //        getStateSpinner();
@@ -207,9 +217,10 @@ public class IssueButtonActivity extends AppCompatActivity {
         et_issue_date =findViewById(R.id.et_issue_date);
         alldataSubmit=findViewById(R.id.alldataSubmit);
         resourceArrayList=new ArrayList<>();
-        subscriberArrayList=new ArrayList<>();
         resourceNameHM=new HashMap<>();
         subscriberNameHM=new HashMap<>();
+        subscriberArrayList=new ArrayList<>();
+
 
     }
     //All Spinner

@@ -41,6 +41,11 @@ public class DashBoardActivity extends AppCompatActivity {
    int female_count=0;
    float male=0;
    float female=0;
+   int age_5_20=0;
+   int age_20_35=0;
+   int age_35_55=0;
+    int age_20_25=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,13 +76,17 @@ public class DashBoardActivity extends AppCompatActivity {
 
         male= (male_count / gender)*100;
         female= (female_count / gender)*100;
+         //Age
 
-
+        age_5_20= Integer.parseInt(sqliteDatabase.getAge5_20Count());
+        age_20_35= Integer.parseInt(sqliteDatabase.getAge20_35Count());
+        age_35_55= Integer.parseInt(sqliteDatabase.getAge35_55Count());
+        age_20_25=Integer.parseInt(sqliteDatabase.getAge20_25Count());
 
 
 
 //        issue=issue*100;
-        Log.e(TAG, "onate: "+male );
+        Log.e(TAG, "aged: "+age_5_20 );
 
         setupPieChart();
         loadPieChartData();
@@ -109,9 +118,10 @@ public class DashBoardActivity extends AppCompatActivity {
 
     private void loadPieChartData() {
         ArrayList<PieEntry> entries = new ArrayList<>();
-        entries.add(new PieEntry(0.2f, "05-20 Years"));
-        entries.add(new PieEntry(0.15f, "20-35 Years"));
-        entries.add(new PieEntry(0.10f, "35-55 Years"));
+        entries.add(new PieEntry(age_5_20, " 5-10 Years" + " [ " +age_5_20+"]"));
+        entries.add(new PieEntry(age_20_35, " 10-15 Years" + " ["+age_20_35+"]"));
+        entries.add(new PieEntry(age_35_55, " 15-20 Years" + " ["+age_35_55+"]"));
+        entries.add(new PieEntry(age_20_25, " 20-25 Years" + " ["+age_20_25+"]"));
 
         ArrayList<Integer> colors = new ArrayList<>();
         for (int color: ColorTemplate.MATERIAL_COLORS) {
@@ -235,21 +245,5 @@ public class DashBoardActivity extends AppCompatActivity {
         //All Method
 
     }
-    private String getAge(int year, int month, int day){
-        Calendar dob = Calendar.getInstance();
-        Calendar today = Calendar.getInstance();
 
-        dob.set(year, month, day);
-
-        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
-
-        if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)){
-            age--;
-        }
-
-        Integer ageInt = new Integer(age);
-        String ageS = ageInt.toString();
-
-        return ageS;
-    }
 }

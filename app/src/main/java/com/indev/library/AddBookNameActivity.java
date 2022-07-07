@@ -12,9 +12,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +50,8 @@ public class AddBookNameActivity extends AppCompatActivity {
     SqliteDatabase sqliteDatabase;
     EditText et_title_of_the_book,et_authour_name,et_donor_name,et_remark;
     ImageView imageView_profile;
+    LinearLayout ll_donorr,ll_et_donor;
+    AutoCompleteTextView autoCompleteTextView;
     Spinner sp_category,sp_library_id,sp_language_id,sp_sources;
     Button alldataSubmit;
     AddBookPojo addBookPojo;
@@ -60,6 +64,10 @@ public class AddBookNameActivity extends AppCompatActivity {
     private String st_book_category = "";
     int category_id = 0,library_id= 0,language_id=0,resource_id=0;
     int count =0;
+    String[] book = new String[0];
+    ArrayList<AddBookPojo> bookArrayList;
+    ArrayList<AddBookPojo> bookArrayListSelect;
+    int donor = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +79,33 @@ public class AddBookNameActivity extends AppCompatActivity {
         sqliteDatabase = new SqliteDatabase(getApplicationContext());
         getBookCategorySpinner();
         getLibrarySpinner();
+        sp_library_id.setSelection(1);
         getLanguageSpinner();
         getSourceBookSpinner();
 //        ArrayAdapter adapter=new ArrayAdapter(AddBookNameActivity.this, R.layout.spinner_lists,category);
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 //        sp_category.setAdapter(adapter);
+        bookArrayList=sqliteDatabase.getAllBooKs();
+        book=new String[bookArrayList.size()];
+        for (int i=0;i<bookArrayList.size();i++){
+            book[i]=bookArrayList.get(i).getResource_name();
+        }
+
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,book);
+          autoCompleteTextView.setAdapter(adapter);
+
+          autoCompleteTextView.setOnDismissListener(new AutoCompleteTextView.OnDismissListener() {
+              @Override
+              public void onDismiss() {
+                  bookArrayListSelect=sqliteDatabase.getAllBooKselective(autoCompleteTextView.getText().toString());
+                  et_authour_name.setText(bookArrayListSelect.get(0).getAuthor_name());
+                  sp_category.setSelection(Integer.parseInt(bookArrayListSelect.get(0).getCategory_id()));
+                  et_remark.setText(bookArrayListSelect.get(0).getDescription());
+                  sp_language_id.setSelection(Integer.parseInt(bookArrayListSelect.get(0).getLanguage_id()));
+//                  imageView_profile.setImageResource(Integer.parseInt(bookArrayListSelect.get(0).getResource_image()));
+
+              }
+          });
 
         imageView_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,13 +132,14 @@ public class AddBookNameActivity extends AppCompatActivity {
 //                        }
 //                    }
                     String book_uniue_id="B"+ CommonClass.getUUID();
+                   sharedPrefHelper.setString("uu_id",book_uniue_id);
+
                     addBookPojo.setResource_unique_id(book_uniue_id);
-                    addBookPojo.setResource_name(et_title_of_the_book.getText().toString().trim());
+                    addBookPojo.setResource_name(autoCompleteTextView.getText().toString().trim());
                     addBookPojo.setResource_image(base64);
                     addBookPojo.setLanguage_id(String.valueOf(language_id));
                     addBookPojo.setSource_id(String.valueOf(resource_id));
                     addBookPojo.setLibrary_id(String.valueOf(library_id));
-                    sharedPrefHelper.setString("librarId", String.valueOf(library_id));
                     addBookPojo.setLibrarain_id(sharedPrefHelper.getString("librarain_id", ""));
                     addBookPojo.setCategory_id(String.valueOf(category_id));
                     addBookPojo.setAuthor_name(et_authour_name.getText().toString().trim());
@@ -186,10 +217,11 @@ public class AddBookNameActivity extends AppCompatActivity {
     {
         sp_sources =findViewById(R.id.sp_sources);
         sp_language_id =findViewById(R.id.sp_language_id);
-
+        autoCompleteTextView=findViewById(R.id.autoCompleteTextView);
         et_title_of_the_book =findViewById(R.id.et_title_of_the_book);
         et_authour_name =findViewById(R.id.et_authour_name);
-
+        ll_donorr=findViewById(R.id.ll_donorr);
+        ll_et_donor=findViewById(R.id.ll_et_donor);
         et_donor_name =findViewById(R.id.et_donor_name);
         et_remark =findViewById(R.id.et_remark);
         alldataSubmit=findViewById(R.id.alldataSubmit);
@@ -305,6 +337,17 @@ public class AddBookNameActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (!sp_sources.getSelectedItem().toString().trim().equalsIgnoreCase("Select Sources of Book")) {
                     if (sp_sources.getSelectedItem().toString().trim() != null) {
+                        if(sp_sources.getSelectedItem().toString().trim().equalsIgnoreCase("Donor")) {
+                            ll_donorr.setVisibility(View.VISIBLE);
+                            ll_et_donor.setVisibility(View.VISIBLE);
+                            donor = 0;
+                        }
+                        else{
+                            ll_donorr.setVisibility(View.GONE);
+                            ll_et_donor.setVisibility(View.GONE);
+                            donor=1;
+                        }
+
                         resource_id = resourcesNameHM.get(sp_sources.getSelectedItem().toString().trim());
                     }
                 }
@@ -329,7 +372,8 @@ public class AddBookNameActivity extends AppCompatActivity {
         ArrayAdapter library_adapter = new ArrayAdapter(this,R.layout.spinner_lists, libraryArrayList);
         library_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp_library_id.setAdapter(library_adapter);
-
+             sp_library_id.setEnabled(false);
+             sp_library_id.requestFocus();
 //        if (screen_type.equals("edit_profile")) {
 //            st_state = sqliteDatabase.getPSStateSp(editpregnantWomenRegisterTable.getState_id());
 //            int pos = state_adapter.getPosition(st_state);
@@ -356,6 +400,7 @@ public class AddBookNameActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null) {
         if (requestCode == CAMERA_REQUEST) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -364,6 +409,7 @@ public class AddBookNameActivity extends AppCompatActivity {
 //
             base64 = encodeTobase64(photo);
             imageView_profile.setImageBitmap(photo);
+        }
         }
 
     }
@@ -404,11 +450,11 @@ public class AddBookNameActivity extends AppCompatActivity {
             errorTextview.requestFocus();
             return false;
         }
-        if (et_title_of_the_book.getText().toString().trim().equalsIgnoreCase("")) {
-            EditText flagEditfield = et_title_of_the_book;
+        if (autoCompleteTextView.getText().toString().trim().equalsIgnoreCase("")) {
+            EditText flagEditfield = autoCompleteTextView;
             String msg = getString(R.string.please_enter_title_of_the_book_name);
-            et_title_of_the_book.setError(msg);
-            et_title_of_the_book.requestFocus();
+            autoCompleteTextView.setError(msg);
+            autoCompleteTextView.requestFocus();
             return false;
         }
 
@@ -421,12 +467,14 @@ public class AddBookNameActivity extends AppCompatActivity {
             errorTextview.requestFocus();
             return false;
         }
-        if (et_donor_name.getText().toString().trim().equalsIgnoreCase("")) {
-            EditText flagEditfield = et_donor_name;
-            String msg = getString(R.string.please_enter_donor_name);
-            et_donor_name.setError(msg);
-            et_donor_name.requestFocus();
-            return false;
+        if (donor==0) {
+            if (et_donor_name.getText().toString().trim().equalsIgnoreCase("")) {
+                EditText flagEditfield = et_donor_name;
+                String msg = getString(R.string.please_enter_donor_name);
+                et_donor_name.setError(msg);
+                et_donor_name.requestFocus();
+                return false;
+            }
         }
         if (sp_category.getSelectedItemPosition() > 0) {
             String itemvalue = String.valueOf(sp_category.getSelectedItem());

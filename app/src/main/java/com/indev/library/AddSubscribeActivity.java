@@ -1,5 +1,8 @@
 package com.indev.library;
 
+import static android.content.ContentValues.TAG;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +13,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -42,11 +46,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
-import java.sql.Date;
+import java.util.Date;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -71,11 +77,16 @@ public class AddSubscribeActivity extends AppCompatActivity {
     HashMap<String, Integer> categoryNameHM;
     ArrayList<String> categoryArrayList;
     ProgressDialog dialog;
+    String age;
      String st_gender;
+     public static String age_in_month;
+    String subscriber_date_of_birth="";
     int category_id = 0;
     String str="";
     private static final int CAMERA_REQUEST=1888;
     String base64;
+    String library_id_book="";
+    private int mmYear,mmMonth,mmDay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,10 +102,23 @@ public class AddSubscribeActivity extends AppCompatActivity {
         intializeAll();
         sharedPrefHelper=new SharedPrefHelper(this);
         sqliteDatabase = new SqliteDatabase(getApplicationContext());
+        Calendar c = Calendar.getInstance();
+        mmYear = c.get(Calendar.YEAR); //current year
+        mmMonth = c.get(Calendar.MONTH); //current month
+        mmDay = c.get(Calendar.DAY_OF_MONTH); //current Day.
         getCategorySpinner();
 //        ArrayAdapter adapter=new ArrayAdapter(AddSubscribeActivity.this, R.layout.spinner_lists,category);
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 //        sp_category.setAdapter(adapter);
+
+        String local_id="";
+        local_id=sharedPrefHelper.getString("local_id","");
+        subscriber_date_of_birth=sqliteDatabase.getCloumnNameDate_of_birth("date_of_birth","subscriber","where local_id='" +local_id+"'");
+        Log.e(TAG, "sbdate: "+subscriber_date_of_birth );
+
+        String uu_id="";
+        uu_id=sharedPrefHelper.getString("uu_id","");
+        library_id_book=sqliteDatabase.getCloumnNameLibraryId("library_id","library","where resource_unique_id='" +uu_id+"'");
 
 
         rg_gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -102,10 +126,10 @@ public class AddSubscribeActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i) {
                     case R.id.rb_male:
-                        st_gender = "Male";
+                        st_gender = "male";
                         break;
                     case R.id.rb_female:
-                        st_gender = "Female";
+                        st_gender = "female";
                         break;
                 }
 
@@ -129,10 +153,14 @@ public class AddSubscribeActivity extends AppCompatActivity {
                 mDay = c.get(Calendar.DAY_OF_MONTH); // current day
                 datePickerDialog = new DatePickerDialog(AddSubscribeActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
+                            @RequiresApi(api = Build.VERSION_CODES.N)
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                                 et_date_of_birth.setText("" +  year + "-" + (monthOfYear + 1) + "-" +dayOfMonth );
-//                                getAge();
+
+                               age= getAge(et_date_of_birth.getText().toString());
+                                Log.e(TAG, "onate: "+age );
+
                             }
                         }, mYear, mMonth, mDay);
 //
@@ -152,6 +180,13 @@ public class AddSubscribeActivity extends AppCompatActivity {
                 datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#ff173e6d"));
             }
         });
+
+//        et_date_of_birth.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                selectDate();
+//            }
+//        });
 
         imageView_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,9 +208,10 @@ public class AddSubscribeActivity extends AppCompatActivity {
                     subscriberPojo.setSubscriber_image(base64);
                     subscriberPojo.setGender(st_gender);
                     subscriberPojo.setCategory_id(String.valueOf(category_id));
+                    subscriberPojo.setSubscriber_age(age);
                     subscriberPojo.setLibrarain_id(sharedPrefHelper.getString("librarain_id", ""));
-                    subscriberPojo.setLibrary_id(sharedPrefHelper.getString("librarId", ""));
 
+                    subscriberPojo.setLibrary_id(library_id_book);
                     subscriberPojo.setEmail(et_email.getText().toString().trim());
                     subscriberPojo.setDate_of_birth(et_date_of_birth.getText().toString().trim());
                     subscriberPojo.setAddress(et_address.getText().toString().trim());
@@ -227,6 +263,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
+
                     }
                     else{
                         Toast.makeText(AddSubscribeActivity.this, "Subscriber Not Registered", Toast.LENGTH_SHORT).show();
@@ -268,6 +305,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null) {
         if (requestCode == CAMERA_REQUEST) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -276,6 +314,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
 //
             base64 = encodeTobase64(photo);
             imageView_profile.setImageBitmap(photo);
+        }
         }
 
     }
@@ -335,7 +374,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
 ////                Intent intent = new Intent(this, MainMenuActivity.class);
 ////                intent.putExtra("user_id",user_id);
 ////                intent.putExtra("mobile",mobile);
-////                intent.putExtra("name",name);
+////                intent.putExtra("name",name );
 ////                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 ////                startActivity(intent);
 //                this.finish();
@@ -412,46 +451,90 @@ private boolean checkValidation() {
 
     return ret;
 }
-
-    private void getAge(long selectedMilli) {
-        Date dateOfBirth = new Date(selectedMilli);
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static String getAge(String date) {
         Calendar dob = Calendar.getInstance();
-        dob.setTime(dateOfBirth);
         Calendar today = Calendar.getInstance();
-        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
-        if (today.get(Calendar.MONTH) < dob.get(Calendar.MONTH)) {
-            age--;
-        } else if (today.get(Calendar.MONTH) == dob.get(Calendar.MONTH)
-                && today.get(Calendar.DAY_OF_MONTH) < dob
-                .get(Calendar.DAY_OF_MONTH)) {
-            age--;
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            Date date1 = (Date) format.parse(date);
+            dob.setTime(date1);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        if (age < 18) {
-            //do something
+        long d = dob.getTimeInMillis();
+        int year = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+        int month = 0, totalDaysDifference = 0;
+        if (today.get(Calendar.MONTH) >= dob.get(Calendar.MONTH)) {
+            month = today.get(Calendar.MONTH) - dob.get(Calendar.MONTH);
         } else {
-
+            month = today.get(Calendar.MONTH) - dob.get(Calendar.MONTH);
+            month = 12 + month;
+            year--;
         }
 
-        str = age + "";
-        Log.d("", getClass().getSimpleName() + ": Age in year= " + age);
+        if (today.get(Calendar.DAY_OF_MONTH) >= dob.get(Calendar.DAY_OF_MONTH)) {
+            totalDaysDifference = today.get(Calendar.DAY_OF_MONTH) - dob.get(Calendar.DAY_OF_MONTH);
+        } else {
+            totalDaysDifference = today.get(Calendar.DAY_OF_MONTH) - dob.get(Calendar.DAY_OF_MONTH);
+            totalDaysDifference = 30 + totalDaysDifference;
+            month--;
+        }
+        double age = (year * 12) + month;
+        Integer ageInt = (int) age;
+
+        age_in_month = ageInt.toString(); //for months return this.
+        int calAge = (Integer.parseInt(age_in_month) / 12); //for years return this.
+        return String.valueOf(calAge);
     }
-//    public static boolean dobdateValidate(String date) {
-//        boolean result = false;
-//        @SuppressLint({"NewApi", "LocalSuppress"}) SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
-//        try {
-//            @SuppressLint({"NewApi", "LocalSuppress"}) Date parseddate = (Date) sdf.parse(date);
-//            Calendar c2 = Calendar.getInstance();
-//            c2.add(Calendar.DAY_OF_YEAR, -18);
-//            Date dateObj2 = new Date(System.currentTimeMillis());
-//            if (parseddate.before(c2.getTime())) {
-//                result = true;
+//    private void selectDate() {
+//        datePickerDialog = new DatePickerDialog(AddSubscribeActivity.this, new DatePickerDialog.OnDateSetListener() {
+//
+//            @RequiresApi(api = Build.VERSION_CODES.N)
+//            @Override
+//            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+//                mmYear = i;
+//                mmMonth = i1;
+//                mmDay = i2;
+//                Calendar c = Calendar.getInstance();
+//                c.set(i, i1, i2);
+//                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+//                String dob = sdf1.format(c.getTime());
+//                String formattedDate = sdf.format(c.getTime());
+//                et_date_of_birth.setText(formattedDate);
+////                flag = "0";
+//                getAge(dob);
+////                flag = "1";
 //            }
-//        } catch (ParseException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//        return result;
+//
+//        }, mmYear, mmMonth, mmDay);
+//
+//        datePickerDialog.show();
 //    }
+
+//private String getAge(int year, int month, int day){
+//    Calendar dob = Calendar.getInstance();
+//    Calendar today = Calendar.getInstance();
+//
+//    dob.set(year, month, day);
+//
+//    int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+//
+//    if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)){
+//        age--;
+//    }
+//
+//    Integer ageInt = new Integer(age);
+//    String ageS = ageInt.toString();
+//
+//    return ageS;
+//
+//
+//}
 
 }

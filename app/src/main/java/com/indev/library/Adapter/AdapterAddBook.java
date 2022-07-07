@@ -19,6 +19,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.indev.library.DeleteBookActivity;
 import com.indev.library.IssueButtonActivity;
 import com.indev.library.Model.AddBookPojo;
 import com.indev.library.Model.SubscriberPojo;
@@ -99,10 +100,12 @@ public class AdapterAddBook extends RecyclerView.Adapter<AdapterAddBook.ViewHold
 
         if (holder.txt_pieces_no.getText().toString().equals("0")){
             holder.btn_issue.setVisibility(View.GONE);
+            holder.btn_delete.setVisibility(View.GONE);
                 holder.out_of_stock.setVisibility(View.VISIBLE);
         }else{
             holder.btn_issue.setVisibility(View.VISIBLE);
-                holder.out_of_stock.setVisibility(View.GONE);
+            holder.btn_delete.setVisibility(View.VISIBLE);
+            holder.out_of_stock.setVisibility(View.GONE);
         }
 
 
@@ -133,6 +136,17 @@ public class AdapterAddBook extends RecyclerView.Adapter<AdapterAddBook.ViewHold
           }
       });
 
+        holder.btn_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DeleteBookActivity.class);
+                intent.putExtra("resourse_name",arrayList.get(position).getResource_name());
+
+                context.startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override
@@ -143,12 +157,13 @@ public class AdapterAddBook extends RecyclerView.Adapter<AdapterAddBook.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView txt_title_book_name,txt_author_name,txt_pieces_no,btn_issue,out_of_stock,txt_total_book,uuid;
+        TextView txt_title_book_name,txt_author_name,txt_pieces_no,btn_issue,out_of_stock,txt_total_book,uuid,btn_delete;
         ImageView img_book;
 
         public ViewHolder(View view) {
             super(view);
             img_book= itemView.findViewById(R.id.img_book);
+            btn_delete= itemView.findViewById(R.id.btn_delete);
 
             txt_total_book= itemView.findViewById(R.id.txt_total_book);
             out_of_stock= itemView.findViewById(R.id.out_of_stock);

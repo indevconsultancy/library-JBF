@@ -15,6 +15,8 @@ public class ClientAPI {
     public  static final  String BASE_URL ="https://jbflibrary.indevconsultancy.in/api/";
     public  static final  String  IMAGE_BASE_URL ="https://jbflibrary.indevconsultancy.in/uploads/subscriber/";
     public  static final  String  IMAGE_BASE_URL1 ="https://jbflibrary.indevconsultancy.in/uploads/resource/";
+    public  static final  String  IMAGE_BASE_URL2 ="https://jbflibrary.indevconsultancy.in/uploads/activity_reporting/";
+
 
     private static Retrofit retrofit = null;
 

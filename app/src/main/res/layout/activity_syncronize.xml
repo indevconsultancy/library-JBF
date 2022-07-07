@@ -129,7 +129,45 @@
                         android:textColor="#000"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
+                    <TextView
+                        android:id="@+id/tv_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:gravity="center"
+                        android:text="Delete Book"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_delete_subs"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:gravity="center"
+                        android:text="Delete Subscriber"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/activity_reporting"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:gravity="center"
+                        android:text="Add Activity Reporting"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -253,7 +291,85 @@
 
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_return12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
+                        <TextView
+                            android:id="@+id/syn_delete"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:background="#66cff5"
+                            android:drawableRight="@drawable/ic_baseline_sync_24"
+                            android:fontFamily="@font/itcavantagradestdbk"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_return123"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/syn_delete_subscriber"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:background="#66cff5"
+                            android:drawableRight="@drawable/ic_baseline_sync_24"
+                            android:fontFamily="@font/itcavantagradestdbk"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_return12356"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/syn_activity_reporting"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:background="#66cff5"
+                            android:drawableRight="@drawable/ic_baseline_sync_24"
+                            android:fontFamily="@font/itcavantagradestdbk"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

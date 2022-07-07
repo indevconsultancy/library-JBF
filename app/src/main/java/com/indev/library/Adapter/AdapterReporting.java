@@ -1,10 +1,10 @@
 package com.indev.library.Adapter;
 
 import static com.indev.library.RestAPI.ClientAPI.IMAGE_BASE_URL;
+import static com.indev.library.RestAPI.ClientAPI.IMAGE_BASE_URL2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
@@ -18,9 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.indev.library.IssueButtonActivity;
 import com.indev.library.Model.ActivityReportingPojo;
-import com.indev.library.Model.AddBookPojo;
 import com.indev.library.R;
 import com.indev.library.SqliteHelper.SharedPrefHelper;
 import com.indev.library.SqliteHelper.SqliteDatabase;
@@ -58,17 +56,21 @@ public class AdapterReporting extends RecyclerView.Adapter<AdapterReporting.View
 
 
 
-        holder.txt_reporting.setText(arrayList.get(position).getActivity_image());
-
-        if (arrayList.get(position).getActivity_image() != null && arrayList.get(position).getActivity_image().length() > 200) {
-            byte[] decodedString = Base64.decode(arrayList.get(position).getActivity_image(), Base64.NO_WRAP);
+//        holder.txt_reporting.setText(arrayList.get(position).getActivity_id());
+        String activity_name="";
+        activity_name=sqliteDatabase.getActivityName(arrayList.get(position).getActivity_id());
+        holder.txt_reporting.setText(activity_name);
+        if (arrayList.get(position).getActivity_image2() != null && arrayList.get(position).getActivity_image2().length() > 200) {
+            String[] img= arrayList.get(position).getActivity_image2().split(",");
+//            byte[] decodedString = Base64.decode(arrayList.get(position).getActivity_image2(), Base64.NO_WRAP);
+            byte[] decodedString = Base64.decode(img[0], Base64.NO_WRAP);
             InputStream inputStream = new ByteArrayInputStream(decodedString);
             Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
             holder.img_reporting.setImageBitmap(bitmap);
         } else {
             try {
                 Picasso.get()
-                        .load(IMAGE_BASE_URL+arrayList.get(position).getActivity_image())
+                        .load(IMAGE_BASE_URL2+arrayList.get(position).getActivity_image2())
                         .placeholder(R.drawable.camera)
                         .into(holder.img_reporting);
             }catch (Exception e){

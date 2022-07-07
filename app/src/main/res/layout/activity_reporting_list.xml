@@ -8,7 +8,7 @@
     android:layout_marginTop="10sp"
     tools:context=".ReportingListActivity">
     <RelativeLayout
-        android:id="@+id/rl_search"
+        android:id="@+id/rl_search_reporting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -21,7 +21,7 @@
 
 
         <EditText
-            android:id="@+id/etSearchBarBook"
+            android:id="@+id/etSearchBarReporting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 

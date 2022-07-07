@@ -18,8 +18,16 @@ public class SubscriberPojo
     private String latitu;
     private String longitu;
     private String library_id;
+    private String subscriber_age;
     private String flag;
 
+    public String getSubscriber_age() {
+        return subscriber_age;
+    }
+
+    public void setSubscriber_age(String subscriber_age) {
+        this.subscriber_age = subscriber_age;
+    }
 
     public String getLibrary_id() {
         return library_id;
@@ -197,6 +205,7 @@ public class SubscriberPojo
     private static final String COLUMN_LIBRARY_ID= "library_id";
     private static final String COLUMN_LATITU= "latitu";
     private static final String COLUMN_LONGITU= "longitu";
+    private static final String COLUMN_SUBSCRIBER_AGE= "subscriber_age";
 
     private static final String COLUMN_SUBSCRIBER_UNIQUE_ID= "subscriber_unique_id";
 
@@ -211,6 +220,7 @@ public class SubscriberPojo
             + COLUMN_USER_ID + " INTEGER, "
             + COLUMN_SUBSCRIBER_NAME + " TEXT, "
             + COLUMN_EMAIL + " TEXT, "
+            + COLUMN_SUBSCRIBER_AGE + " TEXT, "
             + COLUMN_GENDER + " TEXT, "
             + COLUMN_LIBRARAIN_ID + " TEXT, "
             + COLUMN_LIBRARY_ID + " TEXT, "

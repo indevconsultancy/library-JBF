@@ -13,7 +13,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        android:src="@drawable/logo" />
+        android:src="@drawable/muskan" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="310dp"
@@ -41,7 +41,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/itcavantagradestdbk"
-                android:text="Library Management System"
+                android:text="Muskaan Kitab Ghar"
                 android:textColor="#2049a7"
                 android:textSize="20dp" />
 

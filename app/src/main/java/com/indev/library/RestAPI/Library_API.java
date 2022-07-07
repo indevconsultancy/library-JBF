@@ -31,10 +31,17 @@ public interface Library_API
     @POST("download-issuebook.php")
     Call<JsonArray> DatadownloadIssuBook(@Body RequestBody body);
 
+    @POST("activity_reporting_download.php")
+    Call<JsonArray> DatadownloadActivityReporting(@Body RequestBody body);
+
     @POST("user_login.php")
     Call<JsonObject> LoginApi(@Body RequestBody body);
 
     @POST("add_activity_reporting.php")
     Call<JsonObject> Reporting(@Body RequestBody body);
+    @POST("delete_resource.php")
+    Call<JsonObject> DeleteBook(@Body RequestBody body);
 
+    @POST("delete_subscriber.php")
+    Call<JsonObject> DeleteSubscriber(@Body RequestBody body);
 }

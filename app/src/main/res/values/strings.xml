@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">JBF Library</string>
     <string name="are_you_sure_to_want_to_exit_application">Are you sure to want to exit application?</string>
+    <string name="are_you_sure_to_want_to_delete_subscriber">Are you sure to want to Delete Subscriber?</string>
+
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="plase">Please Wait...</string>
@@ -30,5 +32,6 @@
 
     <string name="mr_rama_sankar_tiwari">Mr. Rama Sankar Tiwari</string>
     <string name="ramayana">Ramayana</string>
+    <string name="please_enter_remark">Please Enter Remark</string>
 
 </resources>

@@ -14,6 +14,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -29,6 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,7 +49,6 @@ import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,6 +72,8 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
     String uuid="";
     String s_uuid="";
     String resource_image="";
+
+    public static String age_in_month;
     public AdapterIssueBook(Context context, ArrayList<BookIssuePojo> arrayList, Click_Listener click_listener) {
         this.context = context;
         this.arrayList = arrayList;
@@ -89,10 +93,12 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(@NonNull AdapterIssueBook.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         String returnStatus= sqliteDatabase.getCloumnName("issue_recieve_type","transaction_book","where local_id='" +arrayList.get(position).getLocal_id()+"'");
 
+        String days  = getDays(arrayList.get(position).getIssue_date());
 
         String check= sharedPrefHelper.getString("list_type","");
         if (check.equalsIgnoreCase("issue")){
@@ -137,6 +143,8 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
         resource_image=sqliteDatabase.getresourseImage(arrayList.get(position).getResource_id());
 
 //        holder.txt_book_name.setText(uuid);
+
+       holder.issue_days.setText(days);
 
         book_name=sqliteDatabase.getbookName(arrayList.get(position).getResource_id());
         holder.txt_book_name.setText(book_name + "["+uuid+"]");
@@ -217,6 +225,7 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
                                 int qty = Integer.parseInt(book_count)+1;
                                 sqliteDatabase.updateBookQty("resource", "resource_id='" + arrayList.get(position).getResource_id() + "'",qty,"available_count" );
                                 sqliteDatabase.updateBookQty("resource", "resource_id='" + arrayList.get(position).getResource_id() + "'",0,"resource_status" );
+                                sqliteDatabase.ReturnBookFlagUpdate("transaction_book"," local_id='" + arrayList.get(position).getLocal_id()+"'","0");
                                 sqliteDatabase.updateReturn("transaction_book", " local_id='" + arrayList.get(position).getLocal_id()+"'","recieved_date",currentDateTimeString,"issue_recieve_type","0");
                 click_listener.itemClick(arrayList.get(position).getTransaction_id(),currentDateTimeString,0,position);
                 showSubmitDialog(holder, context, ""+ finalSubscriber_name + " "+"returns the book on"+" "+ currentDateTimeString+" "+"which was issued on "+" "+finalIssuedate +".");
@@ -259,7 +268,47 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
 //        }
 
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static String getDays(String date) {
+        Calendar dob = Calendar.getInstance();
+        Calendar today = Calendar.getInstance();
+        android.icu.text.SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
+        try {
+            Date date1 = (Date) format.parse(date);
+            dob.setTime(date1);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        long d = dob.getTimeInMillis();
+        int year = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+        int month = 0, totalDaysDifference = 0;
+        if (today.get(Calendar.MONTH) >= dob.get(Calendar.MONTH)) {
+            month = today.get(Calendar.MONTH) - dob.get(Calendar.MONTH);
+        } else {
+            month = today.get(Calendar.MONTH) - dob.get(Calendar.MONTH);
+            month = 12 + month;
+            year--;
+        }
+
+        if (today.get(Calendar.DAY_OF_MONTH) >= dob.get(Calendar.DAY_OF_MONTH)) {
+            totalDaysDifference = today.get(Calendar.DAY_OF_MONTH) - dob.get(Calendar.DAY_OF_MONTH);
+        } else {
+            totalDaysDifference = today.get(Calendar.DAY_OF_MONTH) - dob.get(Calendar.DAY_OF_MONTH);
+            totalDaysDifference = 30 + totalDaysDifference;
+            month--;
+        }
+//        double age = (year * 12) + month;
+//        Integer ageInt = (int) age;
+//
+//        age_in_month = ageInt.toString(); //for months return this.
+//        int calAge = (Integer.parseInt(age_in_month) / 12); //for years return this.
+        int days = 10-totalDaysDifference;
+        return String.valueOf(days);
+    }
 
     public static void showSubmitDialog(ViewHolder holder, Context context, String message) {
         submit_alert = new android.app.Dialog(context);
@@ -300,7 +349,7 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView txt_book_name,txt_issued_by,txt_date,btn_return,btnOk,view1;
+        TextView txt_book_name,txt_issued_by,txt_date,btn_return,btnOk,view1,issue_days;
         CardView ll_card_vieww;
         LinearLayout llMain;
         ImageView img_book;
@@ -308,6 +357,7 @@ public class AdapterIssueBook extends RecyclerView.Adapter<AdapterIssueBook.View
 
         public ViewHolder(View view) {
             super(view);
+            issue_days= itemView.findViewById(R.id.issue_days);
             img_book= itemView.findViewById(R.id.img_book);
             return_ok= itemView.findViewById(R.id.return_ok);
             txt_book_name= itemView.findViewById(R.id.txt_book_name);

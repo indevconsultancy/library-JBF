@@ -11,6 +11,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.indev.library.Model.ActivityListPojo;
 import com.indev.library.Model.ActivityReportingPojo;
 import com.indev.library.Model.AddBookPojo;
 import com.indev.library.Model.BookCategoryPojo;
@@ -18,18 +19,13 @@ import com.indev.library.Model.BookIssuePojo;
 import com.indev.library.Model.Language_id_Pojo;
 import com.indev.library.Model.LibraryPojo;
 import com.indev.library.Model.QualificationPojo;
+import com.indev.library.Model.ReportingImagePojo;
 import com.indev.library.Model.SourcesPojo;
 import com.indev.library.Model.SubscriberPojo;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 public class SqliteDatabase extends SQLiteOpenHelper
 {
@@ -48,6 +44,8 @@ public class SqliteDatabase extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase DB)
     {
+        DB.execSQL(ReportingImagePojo.CREATE_TABLE);
+        DB.execSQL(ActivityListPojo.CREATE_TABLE);
         DB.execSQL(SubscriberPojo.CREATE_TABLE);
         DB.execSQL(AddBookPojo.CREATE_TABLE);
         DB.execSQL(BookIssuePojo.CREATE_TABLE);
@@ -94,6 +92,30 @@ public class SqliteDatabase extends SQLiteOpenHelper
         Log.d("LOG", idsds + "id");
         DB.close();
     }
+    public long Reporting_Image(ReportingImagePojo reportingImagePojo)
+    {
+        SQLiteDatabase DB =this.getWritableDatabase();
+        long ids =0;
+        try
+        {
+            if(DB !=null && !DB.isReadOnly())
+            {
+                ContentValues values =new ContentValues();
+
+                values.put("uuid",reportingImagePojo.getUuid());
+                values.put("image",reportingImagePojo.getImage());
+
+                ids =DB.insert("activity_reporting_image",null, values);
+                DB.close();
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            DB.close();
+        }
+        return ids;
+    }
     public long Reporting(ActivityReportingPojo householdMasterModel)
     {
         SQLiteDatabase DB =this.getWritableDatabase();
@@ -103,14 +125,18 @@ public class SqliteDatabase extends SQLiteOpenHelper
             if(DB !=null && !DB.isReadOnly())
             {
                 ContentValues values =new ContentValues();
+
                 values.put("id",householdMasterModel.getId());
                 values.put("activity_id",householdMasterModel.getActivity_id());
                 values.put("librarain_id",householdMasterModel.getLibrarain_id());
-                values.put("activity_image",householdMasterModel.getActivity_image());
-                //values.put("librarain_id",householdMasterModel.getLibrarain_id());
-                values.put("status", "0");
+                values.put("activity_image",householdMasterModel.getActivity_image2());
+                values.put("activity_reporting_id",householdMasterModel.getActivity_reporting_id());
+                values.put("uuid",householdMasterModel.getUuid());
 
-                ids =DB.insert("reporting",null, values);
+                values.put("status", "0");
+                values.put("flag", "0");
+
+                ids =DB.insert("activity_reporting",null, values);
                 DB.close();
             }
         }
@@ -130,7 +156,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
         {
             if (db != null && db.isOpen() && !db.isReadOnly())
             {
-                String query = "select * from reporting order by local_id desc";
+                String query = "select * from activity_reporting order by local_id desc";
 
                 @SuppressLint("Recycle") Cursor cursor = db.rawQuery(query, null);
                 if (cursor != null && cursor.getCount() > 0)
@@ -143,7 +169,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
                         list.setId(cursor.getString(cursor.getColumnIndex("id")));
                         list.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
                         list.setLibrarain_id(cursor.getString(cursor.getColumnIndex("librarain_id")));
-                        list.setActivity_image(cursor.getString(cursor.getColumnIndex("activity_image")));
+                        list.setActivity_image2(cursor.getString(cursor.getColumnIndex("activity_image")));
                         list.setStatus(cursor.getString(cursor.getColumnIndex("status")));
                         activityReportingPojoArrayList.add(list);
                         cursor.moveToNext();
@@ -158,6 +184,76 @@ public class SqliteDatabase extends SQLiteOpenHelper
         return activityReportingPojoArrayList;
 
     }
+    @SuppressLint("Range")
+    public ArrayList<ActivityReportingPojo> getReportingDataArray(String local_id)
+    {
+        ArrayList<ActivityReportingPojo> activityReportingPojoArrayList = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if (db != null && db.isOpen() && !db.isReadOnly())
+            {
+                String query = "select * from activity_reporting where local_id='"+local_id+"'";
+
+                @SuppressLint("Recycle") Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0)
+                {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast())
+                    {
+
+                        ActivityReportingPojo list = new ActivityReportingPojo();
+                        list.setId(cursor.getString(cursor.getColumnIndex("id")));
+                        list.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
+                        list.setLibrarain_id(cursor.getString(cursor.getColumnIndex("librarain_id")));
+                        list.setActivity_image2(cursor.getString(cursor.getColumnIndex("activity_image")));
+                        list.setStatus(cursor.getString(cursor.getColumnIndex("status")));
+                        activityReportingPojoArrayList.add(list);
+                        cursor.moveToNext();
+                    }
+                }
+                db.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            db.close();
+        }
+        return activityReportingPojoArrayList;
+
+    }
+    @SuppressLint("Range")
+    public ArrayList<ReportingImagePojo> getReportingImage(String uuid)
+    {
+        ArrayList<ReportingImagePojo> reportingImagePojoArrayList = new ArrayList<ReportingImagePojo>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if (db != null && db.isOpen() && !db.isReadOnly())
+            {
+                String query = "select * from activity_reporting_image where uuid='"+uuid+"'";
+
+                @SuppressLint("Recycle") Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0)
+                {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast())
+                    {
+
+                        ReportingImagePojo list = new ReportingImagePojo();
+                        list.setImage(cursor.getString(cursor.getColumnIndex("image")));
+                        reportingImagePojoArrayList.add(list);
+                        cursor.moveToNext();
+                    }
+                }
+                db.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            db.close();
+        }
+        return reportingImagePojoArrayList;
+
+    }
     public long Subscriber(SubscriberPojo householdMasterModel)
     {
         SQLiteDatabase DB =this.getWritableDatabase();
@@ -167,9 +263,11 @@ public class SqliteDatabase extends SQLiteOpenHelper
             if(DB !=null && !DB.isReadOnly())
             {
                 ContentValues values =new ContentValues();
-//                values.put("local_id",householdMasterModel.getLocal_id());
+                values.put("local_id",householdMasterModel.getLocal_id());
                 values.put("subscriber_id",householdMasterModel.getSubscriber_id());
                 values.put("subscriber_name",householdMasterModel.getSubscriber_name());
+                values.put("subscriber_age",householdMasterModel.getSubscriber_age());
+
                 values.put("subscriber_unique_id",householdMasterModel.getSubscriber_unique_id());
                 values.put("gender",householdMasterModel.getGender());
                 values.put("librarain_id",householdMasterModel.getLibrarain_id());
@@ -205,7 +303,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
         {
             if (db != null && db.isOpen() && !db.isReadOnly())
             {
-                String query = "select * from subscriber order by local_id desc";
+                String query = "select * from subscriber where status is not 0 order by local_id desc";
 
                 @SuppressLint("Recycle") Cursor cursor = db.rawQuery(query, null);
                 if (cursor != null && cursor.getCount() > 0)
@@ -215,8 +313,10 @@ public class SqliteDatabase extends SQLiteOpenHelper
                     {
 
                         SubscriberPojo list = new SubscriberPojo();
-//                        list.setLocal_id(cursor.getString(cursor.getColumnIndex("local_id")));
+                        list.setLocal_id(cursor.getString(cursor.getColumnIndex("local_id")));
                         list.setSubscriber_id(cursor.getString(cursor.getColumnIndex("subscriber_id")));
+                        list.setSubscriber_age(cursor.getString(cursor.getColumnIndex("subscriber_age")));
+
                         list.setLibrarain_id(cursor.getString(cursor.getColumnIndex("librarain_id")));
                         list.setLatitu(cursor.getString(cursor.getColumnIndex("latitu")));
                         list.setLongitu(cursor.getString(cursor.getColumnIndex("longitu")));
@@ -321,6 +421,15 @@ public class SqliteDatabase extends SQLiteOpenHelper
         Cursor cursor = db.rawQuery("select qualification_category_name from qualification where local_id ='" + category_id + "' ", null);
         if (cursor.moveToFirst())
             sum = cursor.getString(cursor.getColumnIndex("qualification_category_name"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getActivityName(String category_id) {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select activity_name from activity_list where local_id ='" + category_id + "' ", null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("activity_name"));
         return sum;
     }
     @SuppressLint("Range")
@@ -545,7 +654,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
     public String getGenderMaleCount() {
         String sum = "";
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select count(local_id) as total_gender from subscriber where gender='Male'",null);
+        Cursor cursor = db.rawQuery("select count(local_id) as total_gender from subscriber where gender='male'",null);
         if (cursor.moveToFirst())
             sum = cursor.getString(cursor.getColumnIndex("total_gender"));
         return sum;
@@ -554,9 +663,48 @@ public class SqliteDatabase extends SQLiteOpenHelper
     public String getGenderFemaleCount() {
         String sum = "";
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select count(local_id) as total_gender from subscriber where gender='Female'",null);
+        Cursor cursor = db.rawQuery("select count(local_id) as total_gender from subscriber where gender='female'",null);
         if (cursor.moveToFirst())
             sum = cursor.getString(cursor.getColumnIndex("total_gender"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getAge5_20Count() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_age from subscriber where subscriber_age in (5,6,7,8,9,10)",null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_age"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getAge20_35Count() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_age from subscriber where subscriber_age in (10,11,12,13,14,15)"
+                ,null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_age"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getAge35_55Count() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_age from subscriber where subscriber_age in (15,16,17,18,19,20)"
+                ,null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_age"));
+        return sum;
+    }
+    @SuppressLint("Range")
+    public String getAge20_25Count() {
+        String sum = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(local_id) as total_age from subscriber where subscriber_age in (20,21,22,23,24,25)"
+                ,null);
+        if (cursor.moveToFirst())
+            sum = cursor.getString(cursor.getColumnIndex("total_age"));
         return sum;
     }
     @SuppressLint("Range")
@@ -668,6 +816,33 @@ public class SqliteDatabase extends SQLiteOpenHelper
         return state;
     }
     @SuppressLint("Range")
+    public HashMap<String, Integer> getAllActivity() {
+        HashMap<String, Integer> activity = new HashMap<>();
+        ActivityListPojo activityListPojo;
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            if (sqLiteDatabase != null && sqLiteDatabase.isOpen() && !sqLiteDatabase.isReadOnly()) {
+                String query = "select activity_id,activity_name from activity_list";
+                Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast()) {
+                        activityListPojo = new ActivityListPojo();
+                        activityListPojo.setActivity_name(cursor.getString(cursor.getColumnIndex("activity_name")));
+                        activityListPojo.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
+                        cursor.moveToNext();
+                        activity.put(activityListPojo.getActivity_name(), Integer.valueOf(activityListPojo.getActivity_id()));
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            sqLiteDatabase.close();
+        }
+        return activity;
+    }
+    @SuppressLint("Range")
     public HashMap<String, Integer> getAllSources() {
         HashMap<String, Integer> state = new HashMap<>();
         SourcesPojo sourcesPojo;
@@ -769,6 +944,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
                         bookIssuePojo.setCategory_id(cursor.getString(cursor.getColumnIndex("category_id")));
                         bookIssuePojo.setDate_of_birth(cursor.getString(cursor.getColumnIndex("date_of_birth")));
                         bookIssuePojo.setMobile_number(cursor.getString(cursor.getColumnIndex("mobile_number")));
+                        bookIssuePojo.setSubscriber_id(cursor.getString(cursor.getColumnIndex("subscriber_id")));
                         bookIssuePojo.setAddress(cursor.getString(cursor.getColumnIndex("address")));
                         bookIssuePojo.setSubscriber_unique_id(cursor.getString(cursor.getColumnIndex("subscriber_unique_id")));
 
@@ -784,9 +960,70 @@ public class SqliteDatabase extends SQLiteOpenHelper
         }
         return arrayList;
     }
+    @SuppressLint("Range")
+    public ArrayList<ActivityReportingPojo> getSearchReportingList(String namee) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<ActivityReportingPojo> arrayList = new ArrayList<ActivityReportingPojo>();
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "";
+                if (namee.equals("")) {
+
+                    query = "select *,(select activity_name from activity_list a where a.activity_id=b.activity_id) as activityname from activity_reporting  activityname LIKE '" + namee +"%'";
+
+                } else {
+
+                    query = "select *,(select activity_name from activity_list a where a.activity_id=b.activity_id) as activityname from activity_reporting activityname LIKE '" + namee +"%'";
+
+                }
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+
+                    while (!cursor.isAfterLast()) {
+                        ActivityReportingPojo activityReportingPojo = new ActivityReportingPojo();
+                        activityReportingPojo.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
+                        activityReportingPojo.setActivity_image2(cursor.getString(cursor.getColumnIndex("activity_image")));
+
+                        cursor.moveToNext();
+                        arrayList.add(activityReportingPojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            db.close();
+        }
+        return arrayList;
+    }
 
 
     public String getCloumnName(String colName, String table, String whr) {
+        String column = "";
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select " + colName + " " + " from " + table + " " + whr, null);
+            if (cursor.moveToFirst())
+                column = cursor.getString(cursor.getColumnIndex(colName)).trim();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return column;
+    }
+    public String getCloumnNameDate_of_birth(String colName, String table, String whr) {
+        String column = "";
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select " + colName + " " + " from " + table + " " + whr, null);
+            if (cursor.moveToFirst())
+                column = cursor.getString(cursor.getColumnIndex(colName)).trim();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return column;
+    }
+    public String getCloumnNameLibraryId(String colName, String table, String whr) {
         String column = "";
         try {
             SQLiteDatabase db = this.getReadableDatabase();
@@ -842,7 +1079,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
                 values.put("source_id",householdMasterModel.getSource_id());
                 values.put("donor_name",householdMasterModel.getDonor_name());
                 values.put("resource_unique_id",householdMasterModel.getResource_unique_id());
-//                values.put("total_quantity",householdMasterModel.getTotal_quantity());
+                values.put("remark",householdMasterModel.getRemark());
                 values.put("resource_name",householdMasterModel.getResource_name());
                 values.put("author_name",householdMasterModel.getAuthor_name());
                 values.put("category_id",householdMasterModel.getCategory_id());
@@ -863,6 +1100,49 @@ public class SqliteDatabase extends SQLiteOpenHelper
             DB.close();
         }
         return ids;
+    }
+    public long updateeDelete( AddBookPojo addBookPojo,String resource_id) {
+        long subscriber_id = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+                ContentValues values = new ContentValues();
+                values.put("remark", addBookPojo.getRemark());
+                values.put("status", "0");
+                subscriber_id = db.update("resource", values, "resource_id" + "=?",new String[]{resource_id});
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return subscriber_id;
+    }
+    public long updateeSubscriberDelete( SubscriberPojo subscriberPojo,String subscriber_id) {
+        long subscriber_idd = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+                ContentValues values = new ContentValues();
+                values.put("status", "0");
+                subscriber_idd = db.update("subscriber", values, "subscriber_id" + "=?",new String[]{subscriber_id});
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return subscriber_idd;
     }
     @SuppressLint("Range")
     public ArrayList<AddBookPojo> getRegistrationData2()
@@ -960,6 +1240,92 @@ public class SqliteDatabase extends SQLiteOpenHelper
         return arrayList;
     }
     @SuppressLint("Range")
+    public ArrayList<ActivityReportingPojo> getSt_ActivityReportingSyn() {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<ActivityReportingPojo> arrayList = new ArrayList<ActivityReportingPojo>();
+        ActivityReportingPojo activityReportingPojo;
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "select * from activity_reporting WHERE flag=0";
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast()) {
+                        activityReportingPojo = new ActivityReportingPojo();
+                        activityReportingPojo.setLocal_id(cursor.getString(cursor.getColumnIndex("local_id")));
+                        activityReportingPojo.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
+                        activityReportingPojo.setActivity_image2(cursor.getString(cursor.getColumnIndex("activity_image")));
+
+                        cursor.moveToNext();
+                        arrayList.add(activityReportingPojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+    @SuppressLint("Range")
+    public ArrayList<AddBookPojo> getSt_DeleteAddBookSyn() {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<AddBookPojo> arrayList = new ArrayList<AddBookPojo>();
+        AddBookPojo addBookPojo;
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "select * from resource WHERE status=0";
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast()) {
+                        addBookPojo = new AddBookPojo();
+//
+                        addBookPojo.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
+                        addBookPojo.setResource_id(cursor.getString(cursor.getColumnIndex("resource_id")));
+
+                        cursor.moveToNext();
+                        arrayList.add(addBookPojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+    @SuppressLint("Range")
+    public ArrayList<SubscriberPojo> getSt_DeleteSubscriberSyn() {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<SubscriberPojo> arrayList = new ArrayList<SubscriberPojo>();
+        SubscriberPojo subscriberPojo;
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "select * from subscriber WHERE status=0";
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast()) {
+                        subscriberPojo = new SubscriberPojo();
+//
+                        subscriberPojo.setSubscriber_id(cursor.getString(cursor.getColumnIndex("subscriber_id")));
+
+                        cursor.moveToNext();
+                        arrayList.add(subscriberPojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+    @SuppressLint("Range")
     public HashMap<String, Integer> getAllLibrary(String librarian_id) {
         HashMap<String, Integer> library = new HashMap<>();
         LibraryPojo libraryPojo;
@@ -1016,7 +1382,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
             {
                 ContentValues values = new ContentValues();
                 values.put("status", "1");
-                //values.put("flag", "1");
+                values.put("flag", "1");
                 values.put(col, last_activity_id);
                 reporting_id = db.update(table, values, whr, null);
 
@@ -1054,6 +1420,70 @@ public class SqliteDatabase extends SQLiteOpenHelper
         }
         return book_id;
     }
+    public long updateActivityReporting(String table, String whr, String last_activity_id, String col) {
+        long book_id = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+                ContentValues values = new ContentValues();
+                values.put("status", "1");
+                values.put("flag", "1");
+                values.put(col, last_activity_id);
+                book_id = db.update(table, values, whr, null);
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return book_id;
+    }
+    public long DeleteBookupdate(String table, String whr) {
+        long book_id = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+
+                book_id = db.delete(table, whr, null);
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return book_id;
+    }
+    public long DeleteSubscriber(String table, String whr) {
+        long book_id = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+
+                book_id = db.delete(table, whr, null);
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return book_id;
+    }
+
     public long updateee(String table, String whr, String last_transaction_id, String col) {
         long issue_id = 0;
         SQLiteDatabase db = this.getWritableDatabase();
@@ -1088,6 +1518,29 @@ public class SqliteDatabase extends SQLiteOpenHelper
                 ContentValues values = new ContentValues();
                 values.put("status", "1");
                 values.put("flag", "1");
+
+                issue_id = db.update(table, values, whr, null);
+
+                db.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            db.close();
+        }
+        return issue_id;
+    }
+    public long ReturnBookFlagUpdate(String table, String whr,String col) {
+        long issue_id = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try
+        {
+            if(db != null && db.isOpen() && !db.isReadOnly())
+            {
+                ContentValues values = new ContentValues();
+
+                values.put("flag", col);
 
                 issue_id = db.update(table, values, whr, null);
 
@@ -1290,7 +1743,42 @@ public class SqliteDatabase extends SQLiteOpenHelper
         BookIssuePojo bookIssuePojo;
         try {
             if (db != null && db.isOpen() && !db.isReadOnly()) {
-                String query = "select * from transaction_book WHERE flag=0";
+                String query = "select * from transaction_book WHERE issue_recieve_type=1 and flag=0";
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast()) {
+                        bookIssuePojo = new BookIssuePojo();
+//
+                        bookIssuePojo.setSubscriber_id(cursor.getString(cursor.getColumnIndex("subscriber_id")));
+                        bookIssuePojo.setLibrarain_id(cursor.getString(cursor.getColumnIndex("librarain_id")));
+                        bookIssuePojo.setRecieved_date(cursor.getString(cursor.getColumnIndex("recieved_date")));
+                        bookIssuePojo.setLocal_id(cursor.getString(cursor.getColumnIndex("local_id")));
+                        bookIssuePojo.setIssue_recieve_type(cursor.getString(cursor.getColumnIndex("issue_recieve_type")));
+                        bookIssuePojo.setTransaction_id(cursor.getString(cursor.getColumnIndex("transaction_id")));
+                        bookIssuePojo.setResource_id(cursor.getString(cursor.getColumnIndex("resource_id")));
+                        bookIssuePojo.setIssue_date(cursor.getString(cursor.getColumnIndex("issue_date")));
+
+                        cursor.moveToNext();
+                        arrayList.add(bookIssuePojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+    @SuppressLint("Range")
+    public ArrayList<BookIssuePojo> getSt_BookResiverSyn() {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<BookIssuePojo> arrayList = new ArrayList<BookIssuePojo>();
+        BookIssuePojo bookIssuePojo;
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "select * from transaction_book WHERE issue_recieve_type=0 and flag=0";
                 Cursor cursor = db.rawQuery(query, null);
                 if (cursor != null && cursor.getCount() > 0) {
                     cursor.moveToFirst();
@@ -1319,6 +1807,35 @@ public class SqliteDatabase extends SQLiteOpenHelper
     }
     @SuppressLint("Range")
     public HashMap<Integer, String> getAllBooK(String book_name) {
+        HashMap<Integer, String> book = new HashMap<>();
+        AddBookPojo bookCategoryPojo;
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            if (sqLiteDatabase != null && sqLiteDatabase.isOpen() && !sqLiteDatabase.isReadOnly()) {
+                String query = "select resource_id,resource_name,resource_unique_id from resource where resource_name='"+book_name+"' and  resource_status is not 1 and status is not 0  ";
+                Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    while (!cursor.isAfterLast()) {
+                        bookCategoryPojo = new AddBookPojo();
+                        bookCategoryPojo.setResource_name(cursor.getString(cursor.getColumnIndex("resource_name")));
+                        bookCategoryPojo.setResource_unique_id(cursor.getString(cursor.getColumnIndex("resource_unique_id")));
+
+                        bookCategoryPojo.setResource_id(cursor.getString(cursor.getColumnIndex("resource_id")));
+                        cursor.moveToNext();
+                        book.put(Integer.valueOf(bookCategoryPojo.getResource_id()),bookCategoryPojo.getResource_name()+" "+bookCategoryPojo.getResource_unique_id());
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            sqLiteDatabase.close();
+        }
+        return book;
+    }
+    @SuppressLint("Range")
+    public HashMap<Integer, String> getDeleteAllBooK(String book_name) {
         HashMap<Integer, String> book = new HashMap<>();
         AddBookPojo bookCategoryPojo;
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
@@ -1521,4 +2038,68 @@ public class SqliteDatabase extends SQLiteOpenHelper
     }
 
 
+    @SuppressLint("Range")
+    public ArrayList<AddBookPojo> getAllBooKs() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<AddBookPojo> arrayList = new ArrayList<>();
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "";
+
+                query = "select resource_name from resource";
+
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+
+                    while (!cursor.isAfterLast()) {
+                        AddBookPojo bookPojo = new AddBookPojo();
+                        bookPojo.setResource_name(cursor.getString(cursor.getColumnIndex("resource_name")));
+
+                        cursor.moveToNext();
+                        arrayList.add(bookPojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            db.close();
+        }
+        return arrayList;
+    }
+    @SuppressLint("Range")
+    public ArrayList<AddBookPojo> getAllBooKselective(String book_name) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<AddBookPojo> arrayList = new ArrayList<>();
+        try {
+            if (db != null && db.isOpen() && !db.isReadOnly()) {
+                String query = "";
+
+                query = "select * from resource where resource_name='"+book_name +"'";
+
+                Cursor cursor = db.rawQuery(query, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+
+                    while (!cursor.isAfterLast()) {
+                        AddBookPojo bookPojo = new AddBookPojo();
+                        bookPojo.setCategory_id(cursor.getString(cursor.getColumnIndex("category_id")));
+                        bookPojo.setAuthor_name(cursor.getString(cursor.getColumnIndex("author_name")));
+                        bookPojo.setDescription(cursor.getString(cursor.getColumnIndex("description")));
+                        bookPojo.setLanguage_id(cursor.getString(cursor.getColumnIndex("language_id")));
+                        bookPojo.setResource_image(cursor.getString(cursor.getColumnIndex("resource_image")));
+
+                        cursor.moveToNext();
+                        arrayList.add(bookPojo);
+                    }
+                    db.close();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            db.close();
+        }
+        return arrayList;
+    }
 }
