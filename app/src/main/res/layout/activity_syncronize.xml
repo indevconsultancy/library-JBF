@@ -206,7 +206,7 @@
                             android:drawableRight="@drawable/ic_baseline_sync_24"
                             android:fontFamily="@font/itcavantagradestdbk"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="0 pending Data"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -232,7 +232,7 @@
                                                     android:drawableRight="@drawable/ic_baseline_sync_24"
                                                     android:fontFamily="@font/itcavantagradestdbk"
                                                     android:gravity="center"
-                                                    android:text="0"
+                                                    android:text="0 pending Data"
                                                     android:textColor="@color/white"
                                                     android:textSize="15sp"
                                                     android:textStyle="bold" />
@@ -258,7 +258,7 @@
                             android:drawableRight="@drawable/ic_baseline_sync_24"
                             android:fontFamily="@font/itcavantagradestdbk"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="0 pending Data"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -284,7 +284,7 @@
                             android:drawableRight="@drawable/ic_baseline_sync_24"
                             android:fontFamily="@font/itcavantagradestdbk"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="0 pending Data"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -310,7 +310,7 @@
                             android:drawableRight="@drawable/ic_baseline_sync_24"
                             android:fontFamily="@font/itcavantagradestdbk"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="0 pending Data"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -336,7 +336,7 @@
                             android:drawableRight="@drawable/ic_baseline_sync_24"
                             android:fontFamily="@font/itcavantagradestdbk"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="0 pending Data"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -363,7 +363,7 @@
                             android:drawableRight="@drawable/ic_baseline_sync_24"
                             android:fontFamily="@font/itcavantagradestdbk"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="0 pending Data"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />

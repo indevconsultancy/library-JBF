@@ -37,6 +37,14 @@ public interface Library_API
     @POST("user_login.php")
     Call<JsonObject> LoginApi(@Body RequestBody body);
 
+    @POST("change_password.php")
+    Call<JsonObject> ChangePasswordApi(@Body RequestBody body);
+
+    @POST("otp_verification.php")
+    Call<JsonObject>ForgetPasswordApi(@Body RequestBody body);
+    @POST("forget_password.php")
+    Call<JsonObject>ConfirmOtpApi(@Body RequestBody body);
+
     @POST("add_activity_reporting.php")
     Call<JsonObject> Reporting(@Body RequestBody body);
     @POST("delete_resource.php")

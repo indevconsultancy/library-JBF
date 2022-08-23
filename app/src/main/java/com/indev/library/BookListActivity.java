@@ -50,7 +50,7 @@ public class BookListActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                String search = etSearchBarBook.getText().toString();
+                String search = etSearchBarBook.getText().toString().trim();
                 arrayList = sqliteDatabase.getAddBookList(search);
                 AdapterAddBook registerAdapter = new AdapterAddBook(BookListActivity.this, arrayList);
                 int counter = arrayList.size();

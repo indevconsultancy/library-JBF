@@ -57,7 +57,7 @@ public class CommonClass {
 //        sharedPrefHelper.setString("local_id","");
 
         //Calendar calUUID = Calendar.getInstance();
-        DateFormat dateFormatUUID = new SimpleDateFormat("ddss");
+        DateFormat dateFormatUUID = new SimpleDateFormat("mmss");
         String uuid= dateFormatUUID.format(date);
 
         return uuid;

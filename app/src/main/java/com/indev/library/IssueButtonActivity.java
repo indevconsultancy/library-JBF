@@ -67,6 +67,8 @@ public class IssueButtonActivity extends AppCompatActivity {
     BookIssuePojo bookIssuePojo;
     AddBookPojo bookIssuePojo1;
     AddBookPojo addBookPojo;
+    TextView textView;
+    String sImage;
     int mYear,mMonth,mDay,year,month,day;
     DatePickerDialog datePickerDialog;
     HashMap<Integer, String> resourceNameHM;
@@ -111,6 +113,7 @@ public class IssueButtonActivity extends AppCompatActivity {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String formattedDate = df.format(c);
         et_issue_date.setText(formattedDate);
+
         Log.e(TAG, "onatedate: "+formattedDate );
 
         getResourceSpinner();

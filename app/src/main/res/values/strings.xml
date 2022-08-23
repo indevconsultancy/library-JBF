@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">JBF Library</string>
-    <string name="are_you_sure_to_want_to_exit_application">Are you sure to want to exit application?</string>
-    <string name="are_you_sure_to_want_to_delete_subscriber">Are you sure to want to Delete Subscriber?</string>
+    <string name="are_you_sure_to_want_to_exit_application">Are you sure you want to Exit Application?</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure You want to Logout?</string>
+
+    <string name="are_you_sure_to_want_to_delete_subscriber">Are you sure you want to Delete Subscriber?</string>
 
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -16,7 +18,14 @@
     <string name="nav_close">Close</string>
     <string name="please_enter_valid_contact_number">Please Enter Valid Contact Number!</string>
     <string name="please_enter_valid_email_id">Please Enter Valid Email Id!</string>
+    <string name="please_enter_user_valid_email_id">Please Enter User Valid Email Id!</string>
+    <string name="please_enter_valid_otp">Please Enter Valid Otp!</string>
+
     <string name="please_enter_brief_description">Please Enter Brief Description</string>
+    <string name="please_enter_your_password">Please Enter Your Password</string>
+    <string name="please_enter_new_password">Please Enter New Password</string>
+    <string name="please_enter_confirm_password">Please Enter Confirm Password</string>
+    <string name="new_password_and_confirm_password_not_match">New Password And Confirm Password Not Match!</string>
 
     <string name="please_select_gender">Please Select Gender!</string>
     <string name="please_enter_valid_date_of_birth">Please Enter Valid  Date of Birth!</string>

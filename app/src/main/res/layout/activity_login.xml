@@ -10,8 +10,8 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:src="@drawable/muskan" />
 
@@ -19,7 +19,7 @@
         android:layout_width="310dp"
         android:layout_height="400dp"
         android:layout_gravity="center"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
         android:orientation="vertical"
         app:cardBackgroundColor="@android:color/white"
@@ -29,7 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
-            android:layout_marginTop="4dp"
             android:focusable="false"
             android:orientation="vertical">
 
@@ -43,7 +42,7 @@
                 android:fontFamily="@font/itcavantagradestdbk"
                 android:text="Muskaan Kitab Ghar"
                 android:textColor="#2049a7"
-                android:textSize="20dp" />
+                android:textSize="19dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,9 +50,7 @@
                 android:layout_gravity="start"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="7dp"
                 android:gravity="center"
-
                 android:background="@drawable/textviewboader"
                 android:text="Username / Email"
                 android:textSize="13sp">
@@ -194,7 +191,7 @@
             android:layout_marginTop="4dp"
             android:layout_alignParentLeft="true"
             android:textColor="@color/white"
-            android:text="App Version: 0.2"
+            android:text="App Version: 2.0"
             android:textSize="12sp"
             />
     </LinearLayout>

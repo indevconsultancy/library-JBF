@@ -11,7 +11,16 @@ public class LibraryPojo
     private String state_id;
     private String district_id;
     private String village_name;
+    private String created_at;
     private String status;
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
 
     public String getLocal_id() {
         return local_id;
@@ -88,6 +97,7 @@ public class LibraryPojo
     private static final String COLUMN_LOCAL_ID="local_id";
     private static final String COLUMN_ID="id";
     private static final String COLUMN_LIBRARY_ID="library_id";
+    private static final String COLUMN_CREATED_AT="created_at";
     private static final String COLUMN_LIBRARY_NAME = "library_name";
     private static final String COLUMN_LIBRARAIN_ID = "librarain_id";
     private static final String COLUMN_STATE_ID = "state_id";
@@ -100,6 +110,7 @@ public class LibraryPojo
             +COLUMN_ID + " INTEGER, "
             +COLUMN_STATE_ID + " INTEGER, "
             +COLUMN_LIBRARAIN_ID + " TEXT, "
+            +COLUMN_CREATED_AT + " TEXT, "
             +COLUMN_LIBRARY_ID + " INTEGER, "
             + COLUMN_LIBRARY_NAME + " TEXT, "
             + COLUMN_DISTRICT_ID + " TEXT, "

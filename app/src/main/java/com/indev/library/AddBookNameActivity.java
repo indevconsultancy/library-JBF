@@ -374,6 +374,7 @@ public class AddBookNameActivity extends AppCompatActivity {
         sp_library_id.setAdapter(library_adapter);
              sp_library_id.setEnabled(false);
              sp_library_id.requestFocus();
+
 //        if (screen_type.equals("edit_profile")) {
 //            st_state = sqliteDatabase.getPSStateSp(editpregnantWomenRegisterTable.getState_id());
 //            int pos = state_adapter.getPosition(st_state);

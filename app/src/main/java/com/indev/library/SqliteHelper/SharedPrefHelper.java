@@ -13,7 +13,6 @@ public class SharedPrefHelper {
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
     private static Map<Context, SharedPrefHelper> instances = new HashMap<Context, SharedPrefHelper>();
-
     public SharedPrefHelper(Context context) {
         settings = context.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE);
         editor = settings.edit();

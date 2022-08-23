@@ -290,6 +290,7 @@ public class ActivityReportingActivity extends AppCompatActivity {
     }
     private boolean checkValidation() {
         boolean ret = true;
+
         if (sp_activity_reporting.getSelectedItemPosition() > 0) {
             String itemvalue = String.valueOf(sp_activity_reporting.getSelectedItem());
         } else {

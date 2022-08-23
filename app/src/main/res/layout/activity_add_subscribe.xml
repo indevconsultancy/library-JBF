@@ -378,15 +378,6 @@
                         android:layout_gravity="center"
                         android:src="@drawable/camera"
                         tools:ignore="MissingClass" />
-
-                    <ImageView
-                        android:id="@+id/img_selection_pencil"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_image_update" />
-
                 </RelativeLayout>
 
             </LinearLayout>

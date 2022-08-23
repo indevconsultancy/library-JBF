@@ -127,9 +127,18 @@ public class AddSubscribeActivity extends AppCompatActivity {
                 switch (i) {
                     case R.id.rb_male:
                         st_gender = "male";
+//                        if(st_gender.equals("male")) {
+//                            et_mobile_no.setEnabled(true);
+//                            et_mobile_no.requestFocus();
+//                        }
                         break;
                     case R.id.rb_female:
                         st_gender = "female";
+//                        if(st_gender.equals("female")) {
+//                            et_mobile_no.setEnabled(false);
+//                            et_mobile_no.requestFocus();
+//                        }
+
                         break;
                 }
 

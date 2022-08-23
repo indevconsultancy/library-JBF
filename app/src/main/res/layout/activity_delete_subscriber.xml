@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".DeleteSubscriberActivity">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -71,6 +72,8 @@
                 android:text="Delete"
                 android:textAllCaps="false"
                 android:textColor="#ffffff" />
+
+
 
         </LinearLayout>
 

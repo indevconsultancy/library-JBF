@@ -71,7 +71,7 @@ public class AdapterReporting extends RecyclerView.Adapter<AdapterReporting.View
             try {
                 Picasso.get()
                         .load(IMAGE_BASE_URL2+arrayList.get(position).getActivity_image2())
-                        .placeholder(R.drawable.camera)
+                        .placeholder(R.drawable.ic_baseline_photo_24)
                         .into(holder.img_reporting);
             }catch (Exception e){
                 Log.d("Exception",""+e);

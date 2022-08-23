@@ -21,74 +21,98 @@
         android:theme="@style/Theme.JBFLibrary"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePasswordActivity"
+            android:parentActivityName=".MainMenuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".DeleteSubscriberActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DeleteBookActivity"
-            android:exported="false" />
+            android:parentActivityName=".BookListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".BarChartLast1Activity"
             android:exported="false"
-            android:parentActivityName=".DashBoardLastActivity" />
+            android:parentActivityName=".DashBoardLastActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DashBoardLastActivity"
             android:exported="false"
-            android:parentActivityName=".DashBoardBaarChartActivity" />
+            android:parentActivityName=".DashBoardBaarChartActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DashBoardBaarChartActivity"
             android:exported="false"
-            android:parentActivityName=".DashBoardActivity" />
+            android:parentActivityName=".DashBoardActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DashBoardActivity"
             android:exported="false"
-            android:parentActivityName=".MainMenuActivity" />
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SyncronizeActivity"
+            android:exported="false"
             android:parentActivityName=".MainMenuActivity"
-            android:exported="false" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ReportingListActivity"
+            android:exported="false"
             android:parentActivityName=".MainMenuActivity"
-            android:exported="false" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ActivityReportingActivity"
+            android:exported="false"
             android:parentActivityName=".ReportingListActivity"
-            android:exported="false" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ForgetPasswordActivity"
             android:exported="false"
-            android:parentActivityName=".LoginActivity" />
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".IssueButtonActivity"
             android:exported="false"
-            android:parentActivityName=".BookListActivity" />
+            android:parentActivityName=".BookListActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".BookReceiverListActivity"
             android:exported="false"
-            android:parentActivityName=".MainMenuActivity" />
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".BookIssueListActivity"
             android:exported="false"
-            android:parentActivityName=".MainMenuActivity" />
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AddReceiverActivity"
             android:exported="false"
-            android:parentActivityName=".BookReceiverListActivity" />
+            android:parentActivityName=".BookReceiverListActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AddIssueActivity"
             android:exported="false"
-            android:parentActivityName=".BookIssueListActivity" />
+            android:parentActivityName=".BookIssueListActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SubscriberListActivity"
             android:exported="false"
-            android:parentActivityName=".MainMenuActivity" />
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".BookListActivity"
             android:exported="false"
-            android:parentActivityName=".MainMenuActivity" />
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -98,17 +122,21 @@
         <activity
             android:name=".AddSubscribeActivity"
             android:exported="false"
-            android:parentActivityName=".SubscriberListActivity" />
+            android:parentActivityName=".SubscriberListActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AddBookNameActivity"
             android:exported="false"
-            android:parentActivityName=".BookListActivity" />
+            android:parentActivityName=".BookListActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainMenuActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -8,6 +8,14 @@
     tools:ignore="HardcodedText"
     tools:context=".MainMenuActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<!--    <include-->
+<!--        android:id="@+id/tool_bar"-->
+<!--        layout="@layout/tool_barr"/>-->
+
     <GridLayout
         android:id="@+id/mainGrid"
         android:layout_width="match_parent"
@@ -211,12 +219,8 @@
                     android:textColor="#28549E"
                     android:textSize="15sp" />
 
-
             </LinearLayout>
-
-
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_syncronize"
             android:layout_width="0dp"
@@ -336,11 +340,13 @@
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/navigation_drawer" />
+        app:menu="@menu/navigation_drawer"
+        app:headerLayout="@layout/navigation_header"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -206,7 +206,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
                         list.setId(cursor.getString(cursor.getColumnIndex("id")));
                         list.setActivity_id(cursor.getString(cursor.getColumnIndex("activity_id")));
                         list.setLibrarain_id(cursor.getString(cursor.getColumnIndex("librarain_id")));
-                        list.setActivity_image2(cursor.getString(cursor.getColumnIndex("activity_image")));
+//                        list.setActivity_image2(cursor.getString(cursor.getColumnIndex("activity_image")));
                         list.setStatus(cursor.getString(cursor.getColumnIndex("status")));
                         activityReportingPojoArrayList.add(list);
                         cursor.moveToNext();
@@ -961,19 +961,19 @@ public class SqliteDatabase extends SQLiteOpenHelper
         return arrayList;
     }
     @SuppressLint("Range")
-    public ArrayList<ActivityReportingPojo> getSearchReportingList(String namee) {
+    public ArrayList<ActivityReportingPojo> getSearchReportingList(String name) {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<ActivityReportingPojo> arrayList = new ArrayList<ActivityReportingPojo>();
         try {
             if (db != null && db.isOpen() && !db.isReadOnly()) {
                 String query = "";
-                if (namee.equals("")) {
+                if (name.equals("")) {
 
-                    query = "select *,(select activity_name from activity_list a where a.activity_id=b.activity_id) as activityname from activity_reporting  activityname LIKE '" + namee +"%'";
+                    query = "select *,(select activity_name from activity_list a where a.activity_id=b.activity_id) as activityname from activity_reporting b";
 
                 } else {
 
-                    query = "select *,(select activity_name from activity_list a where a.activity_id=b.activity_id) as activityname from activity_reporting activityname LIKE '" + namee +"%'";
+                    query = "select *,(select activity_name from activity_list a where a.activity_id=b.activity_id) as activityname from activity_reporting b  where  activityname LIKE '" + name +"%'";
 
                 }
                 Cursor cursor = db.rawQuery(query, null);
@@ -999,6 +999,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
     }
 
 
+    @SuppressLint("Range")
     public String getCloumnName(String colName, String table, String whr) {
         String column = "";
         try {
@@ -1012,6 +1013,18 @@ public class SqliteDatabase extends SQLiteOpenHelper
         return column;
     }
     public String getCloumnNameDate_of_birth(String colName, String table, String whr) {
+        String column = "";
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select " + colName + " " + " from " + table + " " + whr, null);
+            if (cursor.moveToFirst())
+                column = cursor.getString(cursor.getColumnIndex(colName)).trim();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return column;
+    }
+    public String getCloumnNameLibraryName(String colName, String table, String whr) {
         String column = "";
         try {
             SQLiteDatabase db = this.getReadableDatabase();
@@ -1409,7 +1422,6 @@ public class SqliteDatabase extends SQLiteOpenHelper
                 values.put("flag", "1");
                 values.put(col, last_activity_id);
                 book_id = db.update(table, values, whr, null);
-
                 db.close();
             }
         }
@@ -1520,7 +1532,6 @@ public class SqliteDatabase extends SQLiteOpenHelper
                 values.put("flag", "1");
 
                 issue_id = db.update(table, values, whr, null);
-
                 db.close();
             }
         }
@@ -1648,6 +1659,7 @@ public class SqliteDatabase extends SQLiteOpenHelper
                         // pregnantWomenPojo.setLocal_id(cursor.getString(cursor.getColumnIndex("local_id")));
                         bookIssuePojo.setResource_name(cursor.getString(cursor.getColumnIndex("resource_name")));
                         bookIssuePojo.setAuthor_name(cursor.getString(cursor.getColumnIndex("author_name")));
+                        bookIssuePojo.setResource_image(cursor.getString(cursor.getColumnIndex("resource_image")));
 
                         cursor.moveToNext();
                         arrayList.add(bookIssuePojo);

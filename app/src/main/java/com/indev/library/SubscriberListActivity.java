@@ -54,7 +54,7 @@ public class SubscriberListActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                String search = etSearchBarr.getText().toString();
+                String search = etSearchBarr.getText().toString().trim();
                 arrayList = sqliteDatabase.getSubscriberList(search);
                 AdapterSubscriber registerAdapter = new AdapterSubscriber(SubscriberListActivity.this, arrayList);
                 int counter = arrayList.size();

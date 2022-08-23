@@ -59,6 +59,7 @@ public class DeleteBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_book);
         setTitle("Delete a Book");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initilizeAll();
 
         sharedPrefHelper=new SharedPrefHelper(this);

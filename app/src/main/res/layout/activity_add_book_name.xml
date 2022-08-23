@@ -379,7 +379,6 @@
                     android:paddingLeft="5dp"
                     android:textSize="13dp" />
 
-
             </LinearLayout>
 
             <LinearLayout

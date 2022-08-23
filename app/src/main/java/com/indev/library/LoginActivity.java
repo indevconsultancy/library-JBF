@@ -47,8 +47,8 @@ public class LoginActivity extends AppCompatActivity {
     Button login;
     TextView tvForgotPass;
     CheckBox cb_showPassword;
-  SqliteDatabase sqliteDatabase;
-  SharedPrefHelper sharedPrefHelper;
+    SqliteDatabase sqliteDatabase;
+    SharedPrefHelper sharedPrefHelper;
     private Context context = this;
     private ProgressDialog dialog;
 
