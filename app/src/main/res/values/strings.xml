@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">JBF Library</string>
-    <string name="are_you_sure_to_want_to_exit_application">Are you sure you want to Exit Application?</string>
-    <string name="are_you_sure_you_want_to_logout">Are you sure You want to Logout?</string>
+    <string name="are_you_sure_to_want_to_exit_application">Do you want to Exit Application?</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure want to Logout?</string>
 
-    <string name="are_you_sure_to_want_to_delete_subscriber">Are you sure you want to Delete Subscriber?</string>
+    <string name="are_you_sure_to_want_to_delete_subscriber">Are you sure want to Delete Subscriber?</string>
 
     <string name="yes">Yes</string>
     <string name="no">No</string>

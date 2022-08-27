@@ -75,6 +75,7 @@ public class SyncronizeActivity extends AppCompatActivity {
                 setDataCount ();
             }
         });
+
         //Add Reporting activity
         activityReportingPojoArrayList = sqliteDatabase.getSt_ActivityReportingSyn();
         countAddActivityReporting = activityReportingPojoArrayList.size();

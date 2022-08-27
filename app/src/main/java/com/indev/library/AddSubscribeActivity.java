@@ -416,6 +416,7 @@ private boolean checkValidation() {
 //    }
 
     if (rb_male.isChecked() || rb_female.isChecked()) {
+
     } else {
         Toast.makeText(getApplicationContext(), getString(R.string.please_select_gender), Toast.LENGTH_SHORT).show();
         return false;
