@@ -211,26 +211,30 @@ public class ActivityReportingActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(data!=null) {
             if (requestCode == CAMERA_REQUEST) {
-                Bitmap photo = (Bitmap) data.getExtras().get("data");
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-                byte[] bytes = stream.toByteArray();
+                if(resultCode != RESULT_CANCELED) {
 
-                base64 = encodeTobase64(photo);
-                if (count == 1) {
-                    iv_camera1.setImageBitmap(photo);
-                    img1 = encodeTobase64(photo);
-                }
-                if (count == 2) {
-                    iv_camera2.setImageBitmap(photo);
-                    img2 = encodeTobase64(photo);
+                    Bitmap photo = (Bitmap) data.getExtras().get("data");
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte[] bytes = stream.toByteArray();
 
+
+                    base64 = encodeTobase64(photo);
+                    if (count == 1) {
+                        iv_camera1.setImageBitmap(photo);
+                        img1 = encodeTobase64(photo);
+                    }
+                    if (count == 2) {
+                        iv_camera2.setImageBitmap(photo);
+                        img2 = encodeTobase64(photo);
+
+                    }
+                    if (count == 3) {
+                        iv_camera3.setImageBitmap(photo);
+                        img3 = encodeTobase64(photo);
+                    }
+                    count++;
                 }
-                if (count == 3) {
-                    iv_camera3.setImageBitmap(photo);
-                    img3 = encodeTobase64(photo);
-                }
-                count++;
             }
         }
     }

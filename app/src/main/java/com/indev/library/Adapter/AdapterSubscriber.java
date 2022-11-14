@@ -113,7 +113,7 @@ public class AdapterSubscriber extends RecyclerView.Adapter<AdapterSubscriber.Vi
             try {
                 Picasso.get()
                         .load(IMAGE_BASE_URL+arrayList.get(position).getSubscriber_image())
-                    .placeholder(R.drawable.camera)
+                        .placeholder(R.drawable.camera)
                         .into(holder.img_student);
             }catch (Exception e){
                 Log.d("Exception",""+e);

@@ -122,17 +122,9 @@ public class AddBookNameActivity extends AppCompatActivity {
                 if (checkValidation()) {
                     String uuid=sharedPrefHelper.getString("local_id","");
 
-//                    String a="B";
                     addBookPojo = new AddBookPojo();
-//                    StringBuilder intialize=new StringBuilder();
-//                    for (String s :a.split(" ")){
-//                        count++;
-//                        if (count<=2) {
-//                            intialize.append(s.charAt(0));
-//                        }
-//                    }
                     String book_uniue_id="B"+ CommonClass.getUUID();
-                   sharedPrefHelper.setString("uu_id",book_uniue_id);
+                    sharedPrefHelper.setString("uu_id",book_uniue_id);
 
                     addBookPojo.setResource_unique_id(book_uniue_id);
                     addBookPojo.setResource_name(autoCompleteTextView.getText().toString().trim());
@@ -144,7 +136,6 @@ public class AddBookNameActivity extends AppCompatActivity {
                     addBookPojo.setCategory_id(String.valueOf(category_id));
                     addBookPojo.setAuthor_name(et_authour_name.getText().toString().trim());
                     addBookPojo.setDonor_name(et_donor_name.getText().toString().trim());
-//                    addBookPojo.setAvailable_count(et_no_of_pieces.getText().toString().trim());
 
                     addBookPojo.setDescription(et_remark.getText().toString().trim());
 
@@ -403,13 +394,15 @@ public class AddBookNameActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(data!=null) {
         if (requestCode == CAMERA_REQUEST) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-            byte[] bytes = stream.toByteArray();
+             if(resultCode != RESULT_CANCELED) {
+                 Bitmap photo = (Bitmap) data.getExtras().get("data");
+                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                 photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                 byte[] bytes = stream.toByteArray();
 //
-            base64 = encodeTobase64(photo);
-            imageView_profile.setImageBitmap(photo);
+                 base64 = encodeTobase64(photo);
+                 imageView_profile.setImageBitmap(photo);
+             }
         }
         }
 

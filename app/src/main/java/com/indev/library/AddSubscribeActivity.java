@@ -33,6 +33,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.indev.library.Model.SubscriberPojo;
@@ -59,6 +60,7 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 public class AddSubscribeActivity extends AppCompatActivity {
 //    String [] category ={"Select Category","Student(<Class 5)","Student(>Class 5 and <Class 10)","Other"};
@@ -316,13 +318,15 @@ public class AddSubscribeActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(data!=null) {
         if (requestCode == CAMERA_REQUEST) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-            byte[] bytes = stream.toByteArray();
+            if(resultCode != RESULT_CANCELED) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                byte[] bytes = stream.toByteArray();
 //
-            base64 = encodeTobase64(photo);
-            imageView_profile.setImageBitmap(photo);
+                base64 = encodeTobase64(photo);
+                imageView_profile.setImageBitmap(photo);
+            }
         }
         }
 
@@ -353,11 +357,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
         state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp_category.setAdapter(state_adapter);
        category_id=0;
-//        if (screen_type.equals("edit_profile")) {
-//            st_state = sqliteDatabase.getPSStateSp(editpregnantWomenRegisterTable.getState_id());
-//            int pos = state_adapter.getPosition(st_state);
-//            sp_state.setSelection(pos);
-//        }
+
 
 
         sp_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -376,22 +376,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
             }
         });
     }
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case android.R.id.navigationBarBackground:
-//                // app icon in action bar clicked; go home
-////                Intent intent = new Intent(this, MainMenuActivity.class);
-////                intent.putExtra("user_id",user_id);
-////                intent.putExtra("mobile",mobile);
-////                intent.putExtra("name",name );
-////                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-////                startActivity(intent);
-//                this.finish();
-//                return true;
-//        }
-//                return super.onOptionsItemSelected(item);
-//
-//    }
+
 private boolean checkValidation() {
     boolean ret = true;
 
@@ -402,18 +387,6 @@ private boolean checkValidation() {
         et_mobile_no.requestFocus();
         return false;
     }
-//    //onClick of button perform this simplest code.
-//    String email = et_email.getText().toString().trim();
-//
-//    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-//    if (email.matches(emailPattern))
-//    {
-//        Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
-//    }
-//    else
-//    {
-//        Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
-//    }
 
     if (rb_male.isChecked() || rb_female.isChecked()) {
 
@@ -501,50 +474,6 @@ private boolean checkValidation() {
         int calAge = (Integer.parseInt(age_in_month) / 12); //for years return this.
         return String.valueOf(calAge);
     }
-//    private void selectDate() {
-//        datePickerDialog = new DatePickerDialog(AddSubscribeActivity.this, new DatePickerDialog.OnDateSetListener() {
-//
-//            @RequiresApi(api = Build.VERSION_CODES.N)
-//            @Override
-//            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-//                mmYear = i;
-//                mmMonth = i1;
-//                mmDay = i2;
-//                Calendar c = Calendar.getInstance();
-//                c.set(i, i1, i2);
-//                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-//                String dob = sdf1.format(c.getTime());
-//                String formattedDate = sdf.format(c.getTime());
-//                et_date_of_birth.setText(formattedDate);
-////                flag = "0";
-//                getAge(dob);
-////                flag = "1";
-//            }
-//
-//        }, mmYear, mmMonth, mmDay);
-//
-//        datePickerDialog.show();
-//    }
 
-//private String getAge(int year, int month, int day){
-//    Calendar dob = Calendar.getInstance();
-//    Calendar today = Calendar.getInstance();
-//
-//    dob.set(year, month, day);
-//
-//    int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
-//
-//    if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)){
-//        age--;
-//    }
-//
-//    Integer ageInt = new Integer(age);
-//    String ageS = ageInt.toString();
-//
-//    return ageS;
-//
-//
-//}
 
 }

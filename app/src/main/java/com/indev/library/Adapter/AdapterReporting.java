@@ -40,6 +40,7 @@ public class AdapterReporting extends RecyclerView.Adapter<AdapterReporting.View
         this.arrayList = arrayList;
         sqliteDatabase=new SqliteDatabase(context);
         sharedPrefHelper=new SharedPrefHelper(context);
+
     }
 
     @NonNull

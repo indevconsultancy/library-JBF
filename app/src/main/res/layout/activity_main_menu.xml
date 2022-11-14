@@ -49,7 +49,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/book"
+                    android:src="@drawable/book"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/subscription"
+                    android:src="@drawable/subscription"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/issue"
+                    android:src="@drawable/issue"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -166,7 +166,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/receive"
+                    android:src="@drawable/receive"
                     android:layout_height="100dp"/>
 
                 <TextView
@@ -207,7 +207,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/reporting"
+                    android:src="@drawable/reporting"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -242,7 +242,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/synss"
+                    android:src="@drawable/synss"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -282,7 +282,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/dashboard"
+                    android:src="@drawable/dashboard"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -321,7 +321,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/exit"
+                    android:src="@drawable/exit"
                     android:layout_height="100dp"/>
                 <TextView
                     android:layout_width="match_parent"

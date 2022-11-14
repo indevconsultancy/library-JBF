@@ -15,6 +15,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.window.SplashScreen;
 
@@ -28,6 +32,8 @@ public class SplashScreenActivity extends AppCompatActivity {
     SqliteDatabase sqliteHelper;
     SharedPrefHelper sharedPrefHelper;
     private static String splashLoaded = "No";
+    ImageView imageView;
+    TextView textView2,textView3,textView4;
 
     public static final String MainPP_SP = "MainPP_data";
     public static final int R_PERM = 2822;
@@ -39,6 +45,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         getSupportActionBar().hide();
+        imageView=findViewById(R.id.imageView);
+        textView2=findViewById(R.id.textView2);
+        textView3=findViewById(R.id.textView3);
+        textView4=findViewById(R.id.textView4);
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
 //            public void run() {
@@ -79,6 +89,12 @@ public class SplashScreenActivity extends AppCompatActivity {
             Log.d("TAG","@@@ IN ELSE  Build.VERSION.SDK_INT >= 23");
             callNextActivity();
         }
+//        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+//                R.anim.side_slide);
+////        imageView.startAnimation(animation);
+//        textView2.startAnimation(animation);
+//        textView3.startAnimation(animation);
+//        textView4.startAnimation(animation);
     }
 
     @Override

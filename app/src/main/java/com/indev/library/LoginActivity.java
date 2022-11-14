@@ -399,7 +399,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 final Library_API apiService = ClientAPI.getClient().create(Library_API.class);
                 Call<JsonArray> call = apiService.DatadownloadIssuBook(body);
-//                    final int finalJ = j;
                 call.enqueue(new Callback<JsonArray>() {
                     @Override
                     public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
@@ -418,15 +417,6 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                     sqliteDatabase.saveMasterTable(contentValues, "transaction_book");
                                 }
-//                                Intent intent = new Intent(MainMenuActivity.this, BookReceiverListActivity.class);
-//                                startActivity(intent);
-////                                finish();
-////                                //call_candidateData();
-//                            }else{
-//                                Intent intent = new Intent(MainMenuActivity.this, BookReceiverListActivity.class);
-//                                startActivity(intent);
-////                                finish();
-//                                dialog.dismiss();
                                 Intent intent = new Intent(LoginActivity.this,MainMenuActivity.class);
                                 startActivity(intent);
                             }
