@@ -380,13 +380,13 @@ public class AddSubscribeActivity extends AppCompatActivity {
 private boolean checkValidation() {
     boolean ret = true;
 
-    if (et_mobile_no.getText().toString().trim().length() < 10) {
-        EditText flagEditfield = et_mobile_no;
-        String msg = getString(R.string.please_enter_valid_contact_number);
-        et_mobile_no.setError(msg);
-        et_mobile_no.requestFocus();
-        return false;
-    }
+//    if (et_mobile_no.getText().toString().trim().length() < 10) {
+//        EditText flagEditfield = et_mobile_no;
+//        String msg = getString(R.string.please_enter_valid_contact_number);
+//        et_mobile_no.setError(msg);
+//        et_mobile_no.requestFocus();
+//        return false;
+//    }
 
     if (rb_male.isChecked() || rb_female.isChecked()) {
 

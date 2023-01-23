@@ -97,7 +97,7 @@
                         android:layout_marginBottom="50sp"
                         android:fontFamily="@font/itcavantagradestdbk"
                         android:gravity="center"
-                        android:text="Standerd Wise Subscriber"
+                        android:text="Class Wise Student Details"
                         android:textColor="#5BC239"
                         android:textStyle="bold" />
                 </LinearLayout>

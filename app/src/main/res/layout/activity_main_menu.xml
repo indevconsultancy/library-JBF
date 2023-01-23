@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:fontFamily="@font/itcavantagradestdbk"
-                    android:text="Subscriber"
+                    android:text="Student Details"
                     android:textStyle="bold"
                     android:textColor="#28549E"
                     android:textSize="15sp" />

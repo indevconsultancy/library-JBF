@@ -24,6 +24,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.indev.library.Model.AddBookPojo;
 import com.indev.library.Model.BookIssuePojo;
+import com.indev.library.Model.LibraryPojo;
 import com.indev.library.Model.LoginPojo;
 import com.indev.library.Model.SubscriberPojo;
 import com.indev.library.RestAPI.ClientAPI;
@@ -424,6 +425,73 @@ public class LoginActivity extends AppCompatActivity {
                             {
                                 Intent intent = new Intent(LoginActivity.this,MainMenuActivity.class);
                                 startActivity(intent);
+                            }
+
+                        }catch (Exception e){
+                            Toast.makeText(context, "Something is wrong", Toast.LENGTH_LONG).show();
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<JsonArray> call, Throwable t) {
+                        Log.d("Failure", ""+t.getMessage());
+                    }
+                });
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void unused) {
+                super.onPostExecute(unused);
+            }
+        }.execute();
+    }
+
+    private void call_LibraryDataDownload() {
+        new AsyncTask<Void, Void, Void>(){
+            @SuppressLint("StaticFieldLeak")
+            @Override
+            protected Void doInBackground(Void... voids) {
+                LibraryPojo libraryPojo = new LibraryPojo();
+                String librarain_id=sharedPrefHelper.getString("librarain_id", "");
+                libraryPojo.setLibrarain_id(librarain_id);
+                Gson gson = new Gson();
+                String data = gson.toJson(libraryPojo);
+                MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+                RequestBody body = RequestBody.create(JSON, data);
+
+                final Library_API apiService = ClientAPI.getClient().create(Library_API.class);
+                Call<JsonArray> call = apiService.DatadownloadSubscriber(body);
+//                    final int finalJ = j;
+                call.enqueue(new Callback<JsonArray>() {
+                    @Override
+                    public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
+                        try{
+                            JsonArray data = response.body();
+                            sqliteDatabase.dropTable("library");
+
+                            if(data.size()>0) {
+                                for (int i = 0; i < data.size(); i++) {
+                                    JSONObject singledata = new JSONObject(data.get(i).toString());
+                                    Iterator keys = singledata.keys();
+                                    ContentValues contentValues = new ContentValues();
+                                    while (keys.hasNext()) {
+                                        String currentDynamicKey = (String) keys.next();
+                                        contentValues.put(currentDynamicKey, singledata.get(currentDynamicKey).toString());
+                                    }
+                                    sqliteDatabase.saveMasterTable(contentValues, "library");
+                                }
+//                                Intent intent = new Intent(MainMenuActivity.this, SubscriberListActivity.class);
+//                                startActivity(intent);
+////                                finish();
+//                                //call_candidateData();
+//                            }else{
+//                                Intent intent = new Intent(MainMenuActivity.this, SubscriberListActivity.class);
+//                                startActivity(intent);
+////                                finish();
+//                                dialog.dismiss();
                             }
 
                         }catch (Exception e){

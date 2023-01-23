@@ -32,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/itcavantagradestdbk"
-                    android:text="Name of Subscriber"
+                    android:text="Name of Student"
                     android:textColor="#000000" />
 
                 <TextView
@@ -75,7 +75,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/itcavantagradestdbk"
-
                     android:text="Date of Birth"
                     android:textColor="#000000" />
 
@@ -181,16 +180,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/itcavantagradestdbk"
-
                     android:text="Mobile No"
                     android:textColor="#000000" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/itcavantagradestdbk"
-                    android:text="*"
-                    android:textColor="#DD1212" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/itcavantagradestdbk"-->
+<!--                    android:text="*"-->
+<!--                    android:textColor="#DD1212" />-->
             </LinearLayout>
 
             <LinearLayout
@@ -219,6 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:orientation="horizontal"
+                android:visibility="gone"
                 android:padding="4dp">
 
                 <TextView
@@ -235,6 +234,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:visibility="gone"
                 android:padding="4dp">
 
                 <EditText
@@ -263,7 +263,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/itcavantagradestdbk"
-                    android:text="Qualification"
+                    android:text="Class"
                     android:textColor="#000000" />
 
                 <TextView

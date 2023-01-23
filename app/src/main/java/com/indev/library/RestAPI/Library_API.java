@@ -22,6 +22,7 @@ public interface Library_API
 
     @POST("download_general.php")
     Call<JsonArray> getSpinner(@Body RequestBody body);
+
     @POST("subscriber-list.php")
     Call<JsonArray> DatadownloadSubscriber(@Body RequestBody body);
 

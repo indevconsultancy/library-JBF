@@ -52,7 +52,7 @@
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:background="@drawable/textviewboader"
-                android:text="Username / Email"
+                android:text="Username"
                 android:textSize="13sp">
 
                 <EditText
@@ -63,7 +63,7 @@
                     android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
                     android:drawablePadding="1dp"
                     android:fontFamily="@font/itcavantagradestdbk"
-                    android:hint="User Email"
+                    android:hint="Username"
                     android:textColorHint="@android:color/darker_gray"
                     android:inputType="textEmailAddress"
                     android:textColor="@android:color/black"
