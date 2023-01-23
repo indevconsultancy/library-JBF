@@ -455,16 +455,17 @@ public class LoginActivity extends AppCompatActivity {
             @SuppressLint("StaticFieldLeak")
             @Override
             protected Void doInBackground(Void... voids) {
-                LibraryPojo libraryPojo = new LibraryPojo();
-                String librarain_id=sharedPrefHelper.getString("librarain_id", "");
-                libraryPojo.setLibrarain_id(librarain_id);
+               // LibraryPojo libraryPojo = new LibraryPojo();
+               // String librarain_id=sharedPrefHelper.getString("librarain_id", "");
+                DataDownloadInput dataDownloadInput = new DataDownloadInput();
+                dataDownloadInput.setTable_name("library");
                 Gson gson = new Gson();
-                String data = gson.toJson(libraryPojo);
+                String data = gson.toJson(dataDownloadInput);
                 MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                 RequestBody body = RequestBody.create(JSON, data);
 
                 final Library_API apiService = ClientAPI.getClient().create(Library_API.class);
-                Call<JsonArray> call = apiService.DatadownloadSubscriber(body);
+                Call<JsonArray> call = apiService.getSpinner(body);
 //                    final int finalJ = j;
                 call.enqueue(new Callback<JsonArray>() {
                     @Override
