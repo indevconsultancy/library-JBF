@@ -13,6 +13,25 @@ public class LibraryPojo
     private String village_name;
     private String created_at;
     private String status;
+    private String subscriber_unique_id;
+    private String gender;
+
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getSubscriber_unique_id() {
+        return subscriber_unique_id;
+    }
+
+    public void setSubscriber_unique_id(String subscriber_unique_id) {
+        this.subscriber_unique_id = subscriber_unique_id;
+    }
 
     public String getCreated_at() {
         return created_at;
@@ -103,6 +122,7 @@ public class LibraryPojo
     private static final String COLUMN_STATE_ID = "state_id";
     private static final String COLUMN_DISTRICT_ID = "district_id";
     private static final String COLUMN_VILLAGE_NAME = "village_name";
+    private static final String COLUMN_SUBSCRIBER_UNIQUE_ID = "subscriber_unique_id";
     private static final String COLUMN_STATUS = "status";
 
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +"("
@@ -115,6 +135,7 @@ public class LibraryPojo
             + COLUMN_LIBRARY_NAME + " TEXT, "
             + COLUMN_DISTRICT_ID + " TEXT, "
             + COLUMN_STATUS + " TEXT, "
+            + COLUMN_SUBSCRIBER_UNIQUE_ID + " TEXT, "
             + COLUMN_VILLAGE_NAME + " TEXT "
             + ")";
 

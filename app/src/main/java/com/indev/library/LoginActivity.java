@@ -152,6 +152,7 @@ public class LoginActivity extends AppCompatActivity {
                         call_ActivityReportingDataDownload();
                         call_SubscriberDataDownload();
                         call_BookIssueDataDownload();
+                        call_LibraryDataDownload();
 
 
 
