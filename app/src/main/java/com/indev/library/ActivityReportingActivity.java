@@ -57,7 +57,7 @@ public class ActivityReportingActivity extends AppCompatActivity {
     HashMap<String, Integer> activityNameHM, libraryNameHM,resourcesNameHM,languageNameHM;
     ArrayList<String> activityNameArrayList,libraryArrayList,resourcesArrayList,languageArrayList;
     int activity_id = 0;
-//    String[] str_activity = {"Select Activity Reporting", "Story telling", "Story writing","Exhibition","Other"};
+//    String[] str_activity = {"Select Activity Reporting", "Story telling", "Story wri ting","Exhibition","Other"};
     int count=1;
     String img1="";
     String img2="";

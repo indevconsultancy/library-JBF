@@ -93,7 +93,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_subscribe);
-        getSupportActionBar().setTitle("Add Subscriber");
+        getSupportActionBar().setTitle("Add Student");
         // calling the action bar
         ActionBar actionBar = getSupportActionBar();
 
@@ -409,13 +409,13 @@ private boolean checkValidation() {
         return false;
     }
 //    if (!et_email.getText().toString().trim().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
-    if (!et_email.getText().toString().trim().contains("@")) {
-        EditText flagEditfield = et_email;
-        String msg = getString(R.string.please_enter_valid_emailId);
-        et_email.setError(msg);
-        et_email.requestFocus();
-        return false;
-    }
+//    if (!et_email.getText().toString().trim().contains("@")) {
+//        EditText flagEditfield = et_email;
+//        String msg = getString(R.string.please_enter_valid_emailId);
+//        et_email.setError(msg);
+//        et_email.requestFocus();
+//        return false;
+//    }
     if (sp_category.getSelectedItemPosition() > 0) {
         String itemvalue = String.valueOf(sp_category.getSelectedItem());
     } else {

@@ -330,6 +330,7 @@
                     android:background="@drawable/textviewboader"
                     android:fontFamily="@font/itcavantagradestdbk"
                     android:paddingLeft="5dp"
+                    android:gravity="center_vertical|top"
                     android:singleLine="true"
                     android:textSize="12dp" />
             </LinearLayout>

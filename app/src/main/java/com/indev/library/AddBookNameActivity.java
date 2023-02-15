@@ -97,12 +97,15 @@ public class AddBookNameActivity extends AppCompatActivity {
           autoCompleteTextView.setOnDismissListener(new AutoCompleteTextView.OnDismissListener() {
               @Override
               public void onDismiss() {
-                  bookArrayListSelect=sqliteDatabase.getAllBooKselective(autoCompleteTextView.getText().toString());
-                  et_authour_name.setText(bookArrayListSelect.get(0).getAuthor_name());
-                  sp_category.setSelection(Integer.parseInt(bookArrayListSelect.get(0).getCategory_id()));
-                  et_remark.setText(bookArrayListSelect.get(0).getDescription());
-                  sp_language_id.setSelection(Integer.parseInt(bookArrayListSelect.get(0).getLanguage_id()));
+                  if(bookArrayList.size()>0){
+                  }else {
+                      bookArrayListSelect = sqliteDatabase.getAllBooKselective(autoCompleteTextView.getText().toString());
+                      et_authour_name.setText(bookArrayListSelect.get(0).getAuthor_name());
+                      sp_category.setSelection(Integer.parseInt(bookArrayListSelect.get(0).getCategory_id()));
+                      et_remark.setText(bookArrayListSelect.get(0).getDescription());
+                      sp_language_id.setSelection(Integer.parseInt(bookArrayListSelect.get(0).getLanguage_id()));
 //                  imageView_profile.setImageResource(Integer.parseInt(bookArrayListSelect.get(0).getResource_image()));
+                  }
 
               }
           });
@@ -479,13 +482,13 @@ public class AddBookNameActivity extends AppCompatActivity {
             return false;
         }
 
-        if (et_remark.getText().toString().trim().equalsIgnoreCase("")) {
-            EditText flagEditfield = et_remark;
-            String msg = getString(R.string.please_enter_brief_description);
-            et_remark.setError(msg);
-            et_remark.requestFocus();
-            return false;
-        }
+//        if (et_remark.getText().toString().trim().equalsIgnoreCase("")) {
+//            EditText flagEditfield = et_remark;
+//            String msg = getString(R.string.please_enter_brief_description);
+//            et_remark.setError(msg);
+//            et_remark.requestFocus();
+//            return false;
+//        }
 
         return ret;
     }

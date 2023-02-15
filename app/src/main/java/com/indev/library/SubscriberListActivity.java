@@ -32,7 +32,7 @@ public class SubscriberListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subscriber_list);
 
-        getSupportActionBar().setTitle("List a Subscriber");
+        getSupportActionBar().setTitle("Student List");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
