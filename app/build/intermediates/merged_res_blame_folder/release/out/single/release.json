@@ -1,0 +1,538 @@
+[
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_camera_alt_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_camera_alt_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_password.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_password.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_button_shap.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/button_shap.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_add_subscribe.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_add_subscribe.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_main_menu.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_main_menu.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_send_to_mobile_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_send_to_mobile_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_reporting.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_reporting.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/anim_animation1.xml.flat",
+        "source": "com.indev.library.app-main-34:/anim/animation1.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_add_book_name.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_add_book_name.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_dash_board_last.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_dash_board_last.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_perm_identity_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_perm_identity_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_logo.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/logo.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_muskan.jpeg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/muskan.jpeg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ne.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ne.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_dash_board_baar_chart.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_dash_board_baar_chart.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_library.jpg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/library.jpg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_vi.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/vi.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_add_receiver.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_add_receiver.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_cover.jpg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/cover.jpg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_cover2.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/cover2.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_not.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/not.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_select_book_issue.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_select_book_issue.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_ic_baseline_local_see_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/ic_baseline_local_see_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_multiple_book_return.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_multiple_book_return.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/font_itcavantagradestdbk.otf.flat",
+        "source": "com.indev.library.app-main-34:/font/itcavantagradestdbk.otf"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/anim_side_slide.xml.flat",
+        "source": "com.indev.library.app-main-34:/anim/side_slide.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_draw.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/draw.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_ic_baseline_sync_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/ic_baseline_sync_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_location_on_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_location_on_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_custom_reporting.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/custom_reporting.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_book.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/book.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_submitdialog.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/submitdialog.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_custom_book_receiver.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/custom_book_receiver.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_forget_password.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_forget_password.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_exit.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/exit.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_issue.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/issue.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/anim_animation2.xml.flat",
+        "source": "com.indev.library.app-main-34:/anim/animation2.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_popup_dialog_background.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/popup_dialog_background.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_marker.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/marker.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/xml_data_extraction_rules.xml.flat",
+        "source": "com.indev.library.app-main-34:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/menu_navigation_drawer.xml.flat",
+        "source": "com.indev.library.app-main-34:/menu/navigation_drawer.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_drawicon.jpeg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/drawicon.jpeg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/xml_backup_rules.xml.flat",
+        "source": "com.indev.library.app-main-34:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/anim_open_next.xml.flat",
+        "source": "com.indev.library.app-main-34:/anim/open_next.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_book_issue_list.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_book_issue_list.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_add_issue.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_add_issue.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_issue_button.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_issue_button.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_alert.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/alert.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_buttanshapbalck.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/buttanshapbalck.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_ic_baseline_search_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_subscribe.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/subscribe.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_custom_subscriber.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/custom_subscriber.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_otof.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/otof.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_subscription.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/subscription.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_email_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_email_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_textviewboader.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/textviewboader.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_receive.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/receive.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_logout_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_logout_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_login.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/login.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_delete_subscriber.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_delete_subscriber.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_photo_library_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_photo_library_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_jubil.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/jubil.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_custom_add_book.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/custom_add_book.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_lock_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_lock_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_book_list.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_book_list.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_delete_book.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_delete_book.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_splash_screen.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_editplant.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/editplant.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_cover1.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/cover1.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_camera.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/camera.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_login.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_otp.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/otp.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_change_password.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_change_password.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_buttanshape.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/buttanshape.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_bar_chart_last1.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_bar_chart_last1.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_circle.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/circle.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_image_update.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_image_update.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_spinner_lists.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/spinner_lists.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_account.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_account.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_reporting.jpeg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/reporting.jpeg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_village_library.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/village_library.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_synss.jpeg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/synss.jpeg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_bookspw.jpg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/bookspw.jpg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_out.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/out.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_navigation_header.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/navigation_header.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_category_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_category_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_btn_submit_background.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/btn_submit_background.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_password_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_password_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_dash_board.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_dash_board.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_help.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/help.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_btnround.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/btnround.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_draw1.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/draw1.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_syns.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/syns.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_tool_barr.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/tool_barr.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_avilable.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/avilable.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_check_circle_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_check_circle_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_reporting_list.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_reporting_list.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_power.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_power.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_img_1.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/img_1.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_date_range_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_date_range_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_ic_baseline_add_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/anim_close_next.xml.flat",
+        "source": "com.indev.library.app-main-34:/anim/close_next.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_book_receiver_list.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_book_receiver_list.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_ic_baseline_photo_24.xml.flat",
+        "source": "com.indev.library.app-main-34:/drawable/ic_baseline_photo_24.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-pngs-28:/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_booksd.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable/booksd.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable-v24_img.png.flat",
+        "source": "com.indev.library.app-main-34:/drawable-v24/img.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_syncronize.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_syncronize.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_subscriber_list.xml.flat",
+        "source": "com.indev.library.app-main-34:/layout/activity_subscriber_list.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/drawable_dashboard.jpeg.flat",
+        "source": "com.indev.library.app-main-34:/drawable/dashboard.jpeg"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.indev.library.app-main-34:/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

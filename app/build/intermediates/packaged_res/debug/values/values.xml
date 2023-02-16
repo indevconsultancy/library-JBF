@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="CPP">#EF5350</color>
+    <color name="Java">#29B6F6</color>
+    <color name="Python">#66BB6A</color>
+    <color name="R">#FFA726</color>
+    <color name="black">#FFFFFFFF</color>
+    <color name="black1">#FF000000</color>
+    <color name="colorAccent">#05af9b</color>
+    <color name="colorPrimary">#2049a7</color>
+    <color name="colorPrimary1">#024265</color>
+    <color name="colorPrimaryDark">#024265</color>
+    <color name="color_gray_light">#817D7D</color>
+    <color name="color_one">#fb7268</color>
+    <color name="color_two">#E3E0E0</color>
+    <color name="color_white">#ededf2</color>
+    <color name="green_color">#5BC239</color>
+    <color name="ic_launcher_background">#ECEAEA</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#28549E</color>
+    <color name="purple_700">#28549E</color>
+    <color name="teal_200">#28549E</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">JBF Library</string>
+    <string name="are_you_sure_to_want_to_delete_subscriber">Are you sure want to Delete Subscriber?</string>
+    <string name="are_you_sure_to_want_to_exit_application">Do you want to Exit Application?</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure want to Logout?</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="mr_rama_sankar_tiwari">Mr. Rama Sankar Tiwari</string>
+    <string name="my_account">My Account</string>
+    <string name="nav_close">Close</string>
+    <string name="nav_open">Open</string>
+    <string name="new_password_and_confirm_password_not_match">New Password And Confirm Password Not Match!</string>
+    <string name="no">No</string>
+    <string name="plase">Please Wait...</string>
+    <string name="pleae_enter_password">Please enter password.</string>
+    <string name="pleae_enter_user_name">Please enter user name.</string>
+    <string name="please_enter_address">Please Enter Address!</string>
+    <string name="please_enter_author_name">Please Enter Author Name!</string>
+    <string name="please_enter_brief_description">Please Enter Brief Description</string>
+    <string name="please_enter_confirm_password">Please Enter Confirm Password</string>
+    <string name="please_enter_donor_name">Please Enter Donor Name!</string>
+    <string name="please_enter_issue_date">Please Enter Issue Date!</string>
+    <string name="please_enter_name">Please Enter Name!</string>
+    <string name="please_enter_new_password">Please Enter New Password</string>
+    <string name="please_enter_remark">Please Enter Remark</string>
+    <string name="please_enter_title_of_the_book_name">Please Enter Title Of The Book Name!</string>
+    <string name="please_enter_user_valid_email_id">Please Enter User Valid Email Id!</string>
+    <string name="please_enter_valid_contact_number">Please Enter Valid Contact Number!</string>
+    <string name="please_enter_valid_date_of_birth">Please Enter Valid  Date of Birth!</string>
+    <string name="please_enter_valid_emailId">Please Enter Valid EmailId!</string>
+    <string name="please_enter_valid_email_id">Please Enter Valid Email Id!</string>
+    <string name="please_enter_valid_otp">Please Enter Valid Otp!</string>
+    <string name="please_enter_your_password">Please Enter Your Password</string>
+    <string name="please_select_gender">Please Select Gender!</string>
+    <string name="ramayana">Ramayana</string>
+    <string name="yes">Yes</string>
+    <style name="Theme.JBFLibrary" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>

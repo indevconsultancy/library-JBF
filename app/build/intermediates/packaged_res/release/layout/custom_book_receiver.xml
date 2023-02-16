@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aap="http://schemas.android.com/tools"
+    android:background="#F0F0F0"
+    android:orientation="vertical"
+    tools:ignore="NamespaceTypo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llMain"
+        >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        aap:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutstudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                aap:cardCornerRadius="8dp">
+
+                <android.widget.ImageView
+                    android:id="@+id/img_book"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center|left"
+                    android:elevation="5dp"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/ll_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txt_book_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:singleLine="false"
+                        android:text="ramayana"
+                        android:textColor="#01579b"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:text="Issued to"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_issued_by"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/itcavantagradestdbk"
+
+                        android:paddingLeft="3dp"
+                        android:text="No "
+                        android:textColor="#778899"
+
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="51dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:text="On"
+                        android:fontFamily="@font/itcavantagradestdbk"
+
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/itcavantagradestdbk"
+
+                        android:paddingLeft="3dp"
+                        android:text="No "
+                        android:textColor="#778899"
+
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left"
+                        android:text="Issue Days:"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/issue_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:text="No "
+                        android:textColor="#778899"
+
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/btn_return"
+                        android:layout_width="55dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_shap"
+                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:gravity="center"
+                        android:text="Return"
+                        android:layout_marginLeft="155dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp"
+                        android:visibility="visible" />
+                    <TextView
+
+                        android:id="@+id/return_ok"
+                        android:layout_width="0dp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="210dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_baseline_check_circle_24"                        android:fontFamily="@font/itcavantagradestdbk"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

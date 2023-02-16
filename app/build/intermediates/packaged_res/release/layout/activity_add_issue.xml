@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".AddIssueActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:id="@+id/ll_household"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_householdNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="Book Name"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <EditText
+                    android:id="@+id/et_book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textviewboader"
+                    android:editable="true"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:paddingLeft="5dp"
+                    android:hint="Enter book name"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+
+                    android:text="Subscriber Name"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <EditText
+                    android:id="@+id/et_subscriber"
+                    android:layout_width="0dip"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:hint="Enter subscriber name"
+                    android:background="@drawable/textviewboader"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="State"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textviewboader"
+                android:orientation="vertical"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:padding="4dp">
+
+                <Spinner
+                    android:id="@+id/sp_state"
+                    android:outlineSpotShadowColor="#12B654"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="District"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textviewboader"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <Spinner
+                    android:id="@+id/sp_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="Block"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textviewboader"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <Spinner
+                    android:id="@+id/sp_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="Village"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textviewboader"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <Spinner
+                    android:id="@+id/sp_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+
+                    android:text="Issue Date"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:text="*"
+                    android:textColor="#DD1212" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:padding="4dp">
+
+                <EditText
+                    android:id="@+id/et_issue_date"
+                    android:layout_width="0dip"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:background="@drawable/textviewboader"
+                    android:fontFamily="@font/itcavantagradestdbk"
+                    android:paddingLeft="5dp"
+                    android:hint="dd/mm/yyy"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/ic_baseline_date_range_24"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/alldataSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/btnround"
+                android:fontFamily="@font/itcavantagradestdbk"
+                android:padding="5dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

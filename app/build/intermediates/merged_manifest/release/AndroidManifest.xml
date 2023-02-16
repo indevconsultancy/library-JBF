@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.indev.library"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JBFLibrary" >
+        <activity
+            android:name="com.indev.library.ChangePasswordActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.DeleteSubscriberActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.DeleteBookActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.BookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.BarChartLast1Activity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.DashBoardLastActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.DashBoardLastActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.DashBoardBaarChartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.DashBoardBaarChartActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.DashBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.DashBoardActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.SyncronizeActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.ReportingListActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.ActivityReportingActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.ReportingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.ForgetPasswordActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.IssueButtonActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.BookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.BookReceiverListActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.BookIssueListActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.AddReceiverActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.BookReceiverListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.AddIssueActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.BookIssueListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.SubscriberListActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.BookListActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.indev.library.AddSubscribeActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.SubscriberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.AddBookNameActivity"
+            android:exported="false"
+            android:parentActivityName="com.indev.library.BookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.MainMenuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.indev.library.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.indev.library.com.squareup.picasso"
+            android:exported="false" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.indev.library.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

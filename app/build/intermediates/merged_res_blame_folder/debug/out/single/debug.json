@@ -1,0 +1,542 @@
+[
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_syncronize.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_syncronize.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_date_range_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_date_range_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_receive.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\receive.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_custom_reporting.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\custom_reporting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_location_on_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_location_on_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_button_shap.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\button_shap.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_btnround.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\btnround.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\anim_side_slide.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\anim\\side_slide.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_img_1.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\img_1.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_dash_board.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_dash_board.xml"
+    },
+    {
+        "merged": "com.indev.library.app-merged_res-33:/layout_activity_main_menu.xml.flat",
+        "source": "com.indev.library.app-main-35:/layout/activity_main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\anim_close_next.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\anim\\close_next.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_photo_library_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_photo_library_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_email_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_not.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\not.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_cover.jpg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\cover.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_tool_barr.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\tool_barr.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\anim_animation2.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\anim\\animation2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_delete_book.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_delete_book.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_forget_password.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_forget_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_ic_baseline_local_see_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\ic_baseline_local_see_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_popup_dialog_background.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\popup_dialog_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_textviewboader.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\textviewboader.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_out.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\out.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_subscriber_list.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_subscriber_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_password.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_logout_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_logout_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\anim_animation1.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\anim\\animation1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_send_to_mobile_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_send_to_mobile_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_marker.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\marker.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_village_library.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\village_library.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_navigation_header.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\navigation_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_ic_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_help.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\help.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_otp.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\otp.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_delete_subscriber.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_delete_subscriber.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_photo_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_photo_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_add_receiver.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_add_receiver.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_issue_button.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_issue_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_btn_submit_background.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\btn_submit_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_syns.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\syns.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_avilable.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\avilable.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_ic_baseline_sync_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\ic_baseline_sync_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_book_list.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_book_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_lock_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_buttanshapbalck.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\buttanshapbalck.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_draw1.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\draw1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_bar_chart_last1.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_bar_chart_last1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_submitdialog.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\submitdialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_camera.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\camera.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ne.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ne.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_multiple_book_return.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_multiple_book_return.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_synss.jpeg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\synss.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_cover2.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\cover2.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_subscription.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\subscription.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_login.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_perm_identity_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_perm_identity_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_main_menu.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_editplant.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\editplant.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_booksd.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\booksd.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_jubil.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\jubil.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_account.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_book_issue_list.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_book_issue_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_spinner_lists.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\spinner_lists.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_vi.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\vi.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_dashboard.jpeg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\dashboard.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_cover1.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\cover1.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_camera_alt_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_camera_alt_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_subscribe.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\subscribe.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_buttanshape.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\buttanshape.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_reporting_list.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_reporting_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_power.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_power.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_muskan.jpeg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\muskan.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_image_update.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_image_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_custom_add_book.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\custom_add_book.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_library.jpg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\library.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_bookspw.jpg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\bookspw.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_add_book_name.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_add_book_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_book.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\book.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_drawicon.jpeg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\drawicon.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_draw.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\draw.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_book_receiver_list.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_book_receiver_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_dash_board_last.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_dash_board_last.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_exit.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\exit.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_reporting.jpeg.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\reporting.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-ldpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_alert.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\alert.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_add_subscribe.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_add_subscribe.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_add_issue.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_add_issue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\font_itcavantagradestdbk.otf.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\font\\itcavantagradestdbk.otf"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_reporting.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_reporting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_issue.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\issue.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_custom_subscriber.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\custom_subscriber.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\menu_navigation_drawer.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\menu\\navigation_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\anim_open_next.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\anim\\open_next.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-pngs-28:\\drawable-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable-v24_img.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable-v24\\img.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_check_circle_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_check_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_custom_book_receiver.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\custom_book_receiver.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_password_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_password_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_ic_baseline_category_24.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\ic_baseline_category_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_circle.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\circle.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_select_book_issue.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_select_book_issue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_change_password.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\drawable_otof.png.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\drawable\\otof.png"
+    },
+    {
+        "merged": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-merged_res-33:\\layout_activity_dash_board_baar_chart.xml.flat",
+        "source": "C:\\Users\\Indev\\.gradle\\daemon\\7.3.3\\com.indev.library.app-main-35:\\layout\\activity_dash_board_baar_chart.xml"
+    }
+]
