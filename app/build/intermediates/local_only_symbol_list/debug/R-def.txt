@@ -48,6 +48,7 @@ drawable draw1
 drawable drawicon
 drawable editplant
 drawable exit
+drawable go_button_resource
 drawable help
 drawable ic_account
 drawable ic_baseline_add_24
@@ -152,9 +153,12 @@ id et_mobile_no
 id et_name
 id et_receiver_date
 id et_remark
+id et_roll
+id et_roll_no
 id et_subscriber
 id et_title_of_the_book
 id et_user_email
+id go_button
 id imageView
 id imageView_profile
 id img_book
@@ -189,6 +193,7 @@ id ll_return
 id ll_return12
 id ll_return123
 id ll_return12356
+id ll_roll_no
 id ll_user_email
 id login
 id logout
@@ -216,6 +221,7 @@ id sp_block
 id sp_book
 id sp_bookk
 id sp_category
+id sp_class
 id sp_district
 id sp_issue_to_name
 id sp_language_id
@@ -251,6 +257,7 @@ id tv_info_title
 id tv_issue
 id tv_name
 id tv_return
+id tv_roll_No
 id tv_syn_addbook
 id tv_syn_issue
 id tv_syn_subscriber
@@ -334,6 +341,7 @@ string please_enter_issue_date
 string please_enter_name
 string please_enter_new_password
 string please_enter_remark
+string please_enter_roll_no
 string please_enter_title_of_the_book_name
 string please_enter_user_valid_email_id
 string please_enter_valid_contact_number

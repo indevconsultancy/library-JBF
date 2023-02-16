@@ -11,6 +11,8 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +29,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.indev.library.Model.AddBookPojo;
 import com.indev.library.Model.BookIssuePojo;
+import com.indev.library.Model.QualificationPojo;
 import com.indev.library.RestAPI.ClientAPI;
 import com.indev.library.RestAPI.Library_API;
 import com.indev.library.SqliteHelper.SharedPrefHelper;
@@ -60,7 +63,7 @@ public class IssueButtonActivity extends AppCompatActivity {
 //    String [] book_name ={"The Great Gatsby","Lolita","Brave New World","To The Lighthouse"};
 //    String [] issue_to_name ={"Manish Kumar","Deepak Gupta","Ajay Yadav","Dinesh Kumar","Sunil Kumar","Mohan Kumar"};
 
-    Spinner sp_book,sp_issue_to_name;
+    Spinner sp_book;
     public static EditText et_issue_date;
     SqliteDatabase sqliteDatabase;
     Button alldataSubmit;
@@ -69,6 +72,13 @@ public class IssueButtonActivity extends AppCompatActivity {
     AddBookPojo addBookPojo;
     TextView textView;
     String sImage;
+    EditText sp_issue_to_name;
+    Spinner sp_class;
+    HashMap<String, Integer> categoryNameHM;
+    ArrayList<String> categoryArrayList;
+    int category_id = 0;
+
+
     int mYear,mMonth,mDay,year,month,day;
     DatePickerDialog datePickerDialog;
     HashMap<Integer, String> resourceNameHM;
@@ -94,8 +104,8 @@ public class IssueButtonActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Book Issue");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         intializeAll();
-        sqliteDatabase = new SqliteDatabase(getApplicationContext());
-         sharedPrefHelper=new SharedPrefHelper(this);
+        getClassSpinner();
+
 
 
         Bundle bundle = getIntent().getExtras();
@@ -117,7 +127,7 @@ public class IssueButtonActivity extends AppCompatActivity {
         Log.e(TAG, "onatedate: "+formattedDate );
 
         getResourceSpinner();
-         getSubscriberSpinner();
+//         getSubscriberSpinner();
 
 //        getStateSpinner();
 //        ArrayAdapter adapter=new ArrayAdapter(IssueButtonActivity.this, R.layout.spinner_lists,book_name);
@@ -164,6 +174,7 @@ public class IssueButtonActivity extends AppCompatActivity {
 
 
     }
+
     private void addBookIssueRegistration(RequestBody body, String lid) {
         dialog = ProgressDialog.show(this, "", "Please wait...", true);
         ClientAPI.getClient().create(Library_API.class).AddIssueRegistration(body).enqueue(new Callback<JsonObject>(){
@@ -219,10 +230,14 @@ public class IssueButtonActivity extends AppCompatActivity {
         sp_issue_to_name =findViewById(R.id.sp_issue_to_name);
         et_issue_date =findViewById(R.id.et_issue_date);
         alldataSubmit=findViewById(R.id.alldataSubmit);
+        sp_class=findViewById(R.id.sp_class);
         resourceArrayList=new ArrayList<>();
         resourceNameHM=new HashMap<>();
         subscriberNameHM=new HashMap<>();
         subscriberArrayList=new ArrayList<>();
+        categoryArrayList=new ArrayList<>();
+        sqliteDatabase = new SqliteDatabase(getApplicationContext());
+        sharedPrefHelper=new SharedPrefHelper(this);
 
 
     }
@@ -270,52 +285,53 @@ public class IssueButtonActivity extends AppCompatActivity {
             }
         });
     }
-    private void getSubscriberSpinner() {
 
-        subscriberArrayList.clear();
-        String user_id=sharedPrefHelper.getString("librarain_id", "");
-
-        subscriberNameHM = sqliteDatabase.getAllSubscriber(user_id);
-
-        HashMap<Integer,String > sortedMapAsc = sortByComparator(subscriberNameHM);
-        for (int i = 0; i < sortedMapAsc.size(); i++) {
-            subscriberArrayList.add(sortedMapAsc.values().toArray()[i].toString().trim());
-        }
-        Collections.sort(subscriberArrayList, String.CASE_INSENSITIVE_ORDER);
-
-        subscriberArrayList.add(0, "Select Your Name");
-
-        ArrayAdapter book_adapter = new ArrayAdapter(this,R.layout.spinner_lists, subscriberArrayList);
-        book_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp_issue_to_name.setAdapter(book_adapter);
-//        if (screen_type.equals("edit_profile")) {
-//            st_state = sqliteDatabase.getPSStateSp(editpregnantWomenRegisterTable.getState_id());
-//            int pos = state_adapter.getPosition(st_state);
-//            sp_state.setSelection(pos);
+//    private void getSubscriberSpinner() {
+//
+//        subscriberArrayList.clear();
+//        String user_id=sharedPrefHelper.getString("librarain_id", "");
+//
+//        subscriberNameHM = sqliteDatabase.getAllSubscriber(user_id);
+//
+//        HashMap<Integer,String > sortedMapAsc = sortByComparator(subscriberNameHM);
+//        for (int i = 0; i < sortedMapAsc.size(); i++) {
+//            subscriberArrayList.add(sortedMapAsc.values().toArray()[i].toString().trim());
 //        }
-
-
-        sp_issue_to_name.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (!sp_issue_to_name.getSelectedItem().toString().trim().equalsIgnoreCase("Select Your Name")) {
-                    if (sp_issue_to_name.getSelectedItem().toString().trim() != null) {
-                        String subscriber_name = sp_issue_to_name.getSelectedItem().toString().trim();
-                        for (int j = 0; j < sortedMapAsc.size(); j++) {
-                            if(sortedMapAsc.values().toArray()[j].toString().trim().equals(subscriber_name)){
-                                subscriber_idd=sortedMapAsc.keySet().toArray()[j].toString().trim();
-                            }
-                        }
-                    }
-                }
-
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-    }
+//        Collections.sort(subscriberArrayList, String.CASE_INSENSITIVE_ORDER);
+//
+//        subscriberArrayList.add(0, "Select Your Name");
+//
+//        ArrayAdapter book_adapter = new ArrayAdapter(this,R.layout.spinner_lists, subscriberArrayList);
+//        book_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        sp_issue_to_name.setAdapter(book_adapter);
+////        if (screen_type.equals("edit_profile")) {
+////            st_state = sqliteDatabase.getPSStateSp(editpregnantWomenRegisterTable.getState_id());
+////            int pos = state_adapter.getPosition(st_state);
+////            sp_state.setSelection(pos);
+////        }
+//
+//
+//        sp_issue_to_name.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                if (!sp_issue_to_name.getSelectedItem().toString().trim().equalsIgnoreCase("Select Your Name")) {
+//                    if (sp_issue_to_name.getSelectedItem().toString().trim() != null) {
+//                        String subscriber_name = sp_issue_to_name.getSelectedItem().toString().trim();
+//                        for (int j = 0; j < sortedMapAsc.size(); j++) {
+//                            if(sortedMapAsc.values().toArray()[j].toString().trim().equals(subscriber_name)){
+//                                subscriber_idd=sortedMapAsc.keySet().toArray()[j].toString().trim();
+//                            }
+//                        }
+//                    }
+//                }
+//
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+//    }
     private HashMap<Integer, String> sortByComparator(HashMap<Integer, String> subscriberNameHM) {
         List<Map.Entry<Integer, String>> list = new LinkedList<Map.Entry<Integer, String>>(subscriberNameHM.entrySet());
 
@@ -409,6 +425,38 @@ public class IssueButtonActivity extends AppCompatActivity {
             et_issue_date.setText(formattedDate);
             et_issue_date.setError(null);
         }
+    }
+
+    private void getClassSpinner() {
+        categoryArrayList.clear();
+        categoryNameHM = sqliteDatabase.getAllCategory();
+        for (int i = 0; i < categoryNameHM.size(); i++) {
+            categoryArrayList.add(categoryNameHM.keySet().toArray()[i].toString().trim());
+        }
+        categoryArrayList.add(0, "Select Class");
+
+        ArrayAdapter state_adapter = new ArrayAdapter(this,R.layout.spinner_lists, categoryArrayList);
+        state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_class.setAdapter(state_adapter);
+        category_id=0;
+
+
+
+        sp_class.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (!sp_class.getSelectedItem().toString().trim().equalsIgnoreCase("Select Class")) {
+                    if (sp_class.getSelectedItem().toString().trim() != null) {
+                        category_id = categoryNameHM.get(sp_class.getSelectedItem().toString().trim());
+                    }
+                }
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
 }

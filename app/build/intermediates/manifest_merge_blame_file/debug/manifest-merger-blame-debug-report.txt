@@ -6,313 +6,314 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml
+8-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml
+9-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-11-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:6:5-81
-11-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:6:22-78
+11-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:6:22-78
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:6:5-81
-12-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:8:5-79
-13-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:8:22-76
+13-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:8:5-79
+13-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:8:22-76
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:8:5-79
-14-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:8:22-76
+14-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:8:5-79
+14-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:8:22-76
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:10:5-79
-15-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:10:22-76
+15-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:10:5-79
+15-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:10:22-76
 16    <uses-permission android:name="android.permission.INTERNET" />
-16-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:11:5-67
-16-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:11:22-64
+16-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:11:5-67
+16-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:11:22-64
 17
 18    <application
-18-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:13:5-140:19
+18-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:13:5-140:19
 19        android:allowBackup="true"
-19-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:14:9-35
+19-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:14:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.7.0] C:\Users\Indev\.gradle\caches\transforms-3\0c734a8f9451ded3159b05d46fc9a23a\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+20-->[androidx.core:core:1.7.0] C:\Users\USER\.gradle\caches\transforms-3\0c734a8f9451ded3159b05d46fc9a23a\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 21        android:dataExtractionRules="@xml/data_extraction_rules"
-21-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:15:9-65
+21-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:15:9-65
 22        android:debuggable="true"
 23        android:fullBackupContent="@xml/backup_rules"
-23-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:16:9-54
+23-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:16:9-54
 24        android:icon="@mipmap/ic_launcher"
-24-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:17:9-43
+24-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:17:9-43
 25        android:label="@string/app_name"
-25-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:18:9-41
+25-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:18:9-41
 26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:19:9-54
+26-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:19:9-54
 27        android:supportsRtl="true"
-27-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:20:9-35
-28        android:theme="@style/Theme.JBFLibrary" >
-28-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:21:9-48
-29        <activity
-29-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:23:9-27:51
-30            android:name="com.indev.library.ChangePasswordActivity"
-30-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:24:13-51
-31            android:exported="false"
-31-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:26:13-37
-32            android:parentActivityName="com.indev.library.MainMenuActivity"
-32-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:25:13-59
-33            android:screenOrientation="portrait" />
-33-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:27:13-49
-34        <activity
-34-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:28:9-31:51
-35            android:name="com.indev.library.DeleteSubscriberActivity"
-35-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:29:13-53
-36            android:exported="false"
-36-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:30:13-37
-37            android:screenOrientation="portrait" />
-37-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:31:13-49
-38        <activity
-38-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:32:9-36:51
-39            android:name="com.indev.library.DeleteBookActivity"
-39-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:33:13-47
-40            android:exported="false"
-40-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:35:13-37
-41            android:parentActivityName="com.indev.library.BookListActivity"
-41-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:34:13-59
-42            android:screenOrientation="portrait" />
-42-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:36:13-49
-43        <activity
-43-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:37:9-41:51
-44            android:name="com.indev.library.BarChartLast1Activity"
-44-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:38:13-50
-45            android:exported="false"
-45-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:39:13-37
-46            android:parentActivityName="com.indev.library.DashBoardLastActivity"
-46-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:40:13-64
-47            android:screenOrientation="portrait" />
-47-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:41:13-49
-48        <activity
-48-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:42:9-46:51
-49            android:name="com.indev.library.DashBoardLastActivity"
-49-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:43:13-50
-50            android:exported="false"
-50-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:44:13-37
-51            android:parentActivityName="com.indev.library.DashBoardBaarChartActivity"
-51-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:45:13-69
-52            android:screenOrientation="portrait" />
-52-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:46:13-49
-53        <activity
-53-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:47:9-51:51
-54            android:name="com.indev.library.DashBoardBaarChartActivity"
-54-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:48:13-55
-55            android:exported="false"
-55-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:49:13-37
-56            android:parentActivityName="com.indev.library.DashBoardActivity"
-56-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:50:13-60
-57            android:screenOrientation="portrait" />
-57-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:51:13-49
-58        <activity
-58-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:52:9-56:51
-59            android:name="com.indev.library.DashBoardActivity"
-59-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:53:13-46
-60            android:exported="false"
-60-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:54:13-37
-61            android:parentActivityName="com.indev.library.MainMenuActivity"
-61-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:55:13-59
-62            android:screenOrientation="portrait" />
-62-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:56:13-49
-63        <activity
-63-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:57:9-61:51
-64            android:name="com.indev.library.SyncronizeActivity"
-64-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:58:13-47
-65            android:exported="false"
-65-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:59:13-37
-66            android:parentActivityName="com.indev.library.MainMenuActivity"
-66-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:60:13-59
-67            android:screenOrientation="portrait" />
-67-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:61:13-49
-68        <activity
-68-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:62:9-66:51
-69            android:name="com.indev.library.ReportingListActivity"
-69-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:63:13-50
-70            android:exported="false"
-70-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:64:13-37
-71            android:parentActivityName="com.indev.library.MainMenuActivity"
-71-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:65:13-59
-72            android:screenOrientation="portrait" />
-72-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:66:13-49
-73        <activity
-73-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:67:9-71:51
-74            android:name="com.indev.library.ActivityReportingActivity"
-74-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:68:13-54
-75            android:exported="false"
-75-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:69:13-37
-76            android:parentActivityName="com.indev.library.ReportingListActivity"
-76-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:70:13-64
-77            android:screenOrientation="portrait" />
-77-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:71:13-49
-78        <activity
-78-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:72:9-76:51
-79            android:name="com.indev.library.ForgetPasswordActivity"
-79-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:73:13-51
-80            android:exported="false"
-80-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:74:13-37
-81            android:parentActivityName="com.indev.library.LoginActivity"
-81-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:75:13-56
-82            android:screenOrientation="portrait" />
-82-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:76:13-49
-83        <activity
-83-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:77:9-81:51
-84            android:name="com.indev.library.IssueButtonActivity"
-84-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:78:13-48
-85            android:exported="false"
-85-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:79:13-37
-86            android:parentActivityName="com.indev.library.BookListActivity"
-86-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:80:13-59
-87            android:screenOrientation="portrait" />
-87-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:81:13-49
-88        <activity
-88-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:82:9-86:51
-89            android:name="com.indev.library.BookReceiverListActivity"
-89-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:83:13-53
-90            android:exported="false"
-90-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:84:13-37
-91            android:parentActivityName="com.indev.library.MainMenuActivity"
-91-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:85:13-59
-92            android:screenOrientation="portrait" />
-92-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:86:13-49
-93        <activity
-93-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:87:9-91:51
-94            android:name="com.indev.library.BookIssueListActivity"
-94-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:88:13-50
-95            android:exported="false"
-95-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:89:13-37
-96            android:parentActivityName="com.indev.library.MainMenuActivity"
-96-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:90:13-59
-97            android:screenOrientation="portrait" />
-97-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:91:13-49
-98        <activity
-98-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:92:9-96:51
-99            android:name="com.indev.library.AddReceiverActivity"
-99-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:93:13-48
-100            android:exported="false"
-100-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:94:13-37
-101            android:parentActivityName="com.indev.library.BookReceiverListActivity"
-101-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:95:13-67
-102            android:screenOrientation="portrait" />
-102-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:96:13-49
-103        <activity
-103-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:97:9-101:51
-104            android:name="com.indev.library.AddIssueActivity"
-104-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:98:13-45
-105            android:exported="false"
-105-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:99:13-37
-106            android:parentActivityName="com.indev.library.BookIssueListActivity"
-106-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:100:13-64
-107            android:screenOrientation="portrait" />
-107-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:101:13-49
-108        <activity
-108-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:102:9-106:51
-109            android:name="com.indev.library.SubscriberListActivity"
-109-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:103:13-51
-110            android:exported="false"
-110-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:104:13-37
-111            android:parentActivityName="com.indev.library.MainMenuActivity"
-111-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:105:13-59
-112            android:screenOrientation="portrait" />
-112-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:106:13-49
-113        <activity
-113-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:107:9-111:51
-114            android:name="com.indev.library.BookListActivity"
-114-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:108:13-45
-115            android:exported="false"
-115-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:109:13-37
-116            android:parentActivityName="com.indev.library.MainMenuActivity"
-116-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:110:13-59
-117            android:screenOrientation="portrait" />
-117-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:111:13-49
-118        <activity
-118-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:112:9-121:20
-119            android:name="com.indev.library.SplashScreenActivity"
-119-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:113:13-49
-120            android:exported="true"
-120-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:114:13-36
-121            android:screenOrientation="portrait" >
-121-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:115:13-49
-122            <intent-filter>
-122-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:116:13-120:29
-123                <action android:name="android.intent.action.MAIN" />
-123-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:117:17-69
-123-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:117:25-66
-124
-125                <category android:name="android.intent.category.LAUNCHER" />
-125-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:119:17-77
-125-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:119:27-74
-126            </intent-filter>
-127        </activity>
-128        <activity
-128-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:122:9-126:51
-129            android:name="com.indev.library.AddSubscribeActivity"
-129-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:123:13-49
-130            android:exported="false"
-130-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:124:13-37
-131            android:parentActivityName="com.indev.library.SubscriberListActivity"
-131-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:125:13-65
-132            android:screenOrientation="portrait" />
-132-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:126:13-49
-133        <activity
-133-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:127:9-131:51
-134            android:name="com.indev.library.AddBookNameActivity"
-134-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:128:13-48
-135            android:exported="false"
-135-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:129:13-37
-136            android:parentActivityName="com.indev.library.BookListActivity"
-136-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:130:13-59
-137            android:screenOrientation="portrait" />
-137-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:131:13-49
-138        <activity
-138-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:132:9-135:51
-139            android:name="com.indev.library.MainMenuActivity"
-139-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:133:13-45
-140            android:exported="false"
-140-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:134:13-37
-141            android:screenOrientation="portrait" />
-141-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:135:13-49
-142        <activity
-142-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:136:9-139:51
-143            android:name="com.indev.library.LoginActivity"
-143-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:137:13-42
-144            android:exported="false"
-144-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:138:13-37
-145            android:screenOrientation="portrait" />
-145-->D:\Users\Indev\JBF_Library\app\src\main\AndroidManifest.xml:139:13-49
-146
-147        <provider
-147-->[com.squareup.picasso:picasso:2.71828] C:\Users\Indev\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
-148            android:name="com.squareup.picasso.PicassoProvider"
-148-->[com.squareup.picasso:picasso:2.71828] C:\Users\Indev\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
-149            android:authorities="com.indev.library.com.squareup.picasso"
-149-->[com.squareup.picasso:picasso:2.71828] C:\Users\Indev\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
-150            android:exported="false" />
-150-->[com.squareup.picasso:picasso:2.71828] C:\Users\Indev\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
-151        <provider
-151-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-152            android:name="androidx.startup.InitializationProvider"
-152-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
-153            android:authorities="com.indev.library.androidx-startup"
-153-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
-154            android:exported="false" >
-154-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
-155            <meta-data
-155-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-156                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-156-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
-157                android:value="androidx.startup" />
-157-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Indev\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
-158            <meta-data
-158-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Indev\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-159                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-159-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Indev\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-160                android:value="androidx.startup" />
-160-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Indev\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-161        </provider>
-162    </application>
-163
-164</manifest>
+27-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:20:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.JBFLibrary" >
+29-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:21:9-48
+30        <activity
+30-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:23:9-27:51
+31            android:name="com.indev.library.ChangePasswordActivity"
+31-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:24:13-51
+32            android:exported="false"
+32-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:26:13-37
+33            android:parentActivityName="com.indev.library.MainMenuActivity"
+33-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:25:13-59
+34            android:screenOrientation="portrait" />
+34-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:27:13-49
+35        <activity
+35-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:28:9-31:51
+36            android:name="com.indev.library.DeleteSubscriberActivity"
+36-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:29:13-53
+37            android:exported="false"
+37-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:30:13-37
+38            android:screenOrientation="portrait" />
+38-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:31:13-49
+39        <activity
+39-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:32:9-36:51
+40            android:name="com.indev.library.DeleteBookActivity"
+40-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:33:13-47
+41            android:exported="false"
+41-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:35:13-37
+42            android:parentActivityName="com.indev.library.BookListActivity"
+42-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:34:13-59
+43            android:screenOrientation="portrait" />
+43-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:36:13-49
+44        <activity
+44-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:37:9-41:51
+45            android:name="com.indev.library.BarChartLast1Activity"
+45-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:38:13-50
+46            android:exported="false"
+46-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:39:13-37
+47            android:parentActivityName="com.indev.library.DashBoardLastActivity"
+47-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:40:13-64
+48            android:screenOrientation="portrait" />
+48-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:41:13-49
+49        <activity
+49-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:42:9-46:51
+50            android:name="com.indev.library.DashBoardLastActivity"
+50-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:43:13-50
+51            android:exported="false"
+51-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:44:13-37
+52            android:parentActivityName="com.indev.library.DashBoardBaarChartActivity"
+52-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:45:13-69
+53            android:screenOrientation="portrait" />
+53-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:46:13-49
+54        <activity
+54-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:47:9-51:51
+55            android:name="com.indev.library.DashBoardBaarChartActivity"
+55-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:48:13-55
+56            android:exported="false"
+56-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:49:13-37
+57            android:parentActivityName="com.indev.library.DashBoardActivity"
+57-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:50:13-60
+58            android:screenOrientation="portrait" />
+58-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:51:13-49
+59        <activity
+59-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:52:9-56:51
+60            android:name="com.indev.library.DashBoardActivity"
+60-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:53:13-46
+61            android:exported="false"
+61-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:54:13-37
+62            android:parentActivityName="com.indev.library.MainMenuActivity"
+62-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:55:13-59
+63            android:screenOrientation="portrait" />
+63-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:56:13-49
+64        <activity
+64-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:57:9-61:51
+65            android:name="com.indev.library.SyncronizeActivity"
+65-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:58:13-47
+66            android:exported="false"
+66-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:59:13-37
+67            android:parentActivityName="com.indev.library.MainMenuActivity"
+67-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:60:13-59
+68            android:screenOrientation="portrait" />
+68-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:61:13-49
+69        <activity
+69-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:62:9-66:51
+70            android:name="com.indev.library.ReportingListActivity"
+70-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:63:13-50
+71            android:exported="false"
+71-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:64:13-37
+72            android:parentActivityName="com.indev.library.MainMenuActivity"
+72-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:65:13-59
+73            android:screenOrientation="portrait" />
+73-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:66:13-49
+74        <activity
+74-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:67:9-71:51
+75            android:name="com.indev.library.ActivityReportingActivity"
+75-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:68:13-54
+76            android:exported="false"
+76-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:69:13-37
+77            android:parentActivityName="com.indev.library.ReportingListActivity"
+77-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:70:13-64
+78            android:screenOrientation="portrait" />
+78-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:71:13-49
+79        <activity
+79-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:72:9-76:51
+80            android:name="com.indev.library.ForgetPasswordActivity"
+80-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:73:13-51
+81            android:exported="false"
+81-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:74:13-37
+82            android:parentActivityName="com.indev.library.LoginActivity"
+82-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:75:13-56
+83            android:screenOrientation="portrait" />
+83-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:76:13-49
+84        <activity
+84-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:77:9-81:51
+85            android:name="com.indev.library.IssueButtonActivity"
+85-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:78:13-48
+86            android:exported="false"
+86-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:79:13-37
+87            android:parentActivityName="com.indev.library.BookListActivity"
+87-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:80:13-59
+88            android:screenOrientation="portrait" />
+88-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:81:13-49
+89        <activity
+89-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:82:9-86:51
+90            android:name="com.indev.library.BookReceiverListActivity"
+90-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:83:13-53
+91            android:exported="false"
+91-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:84:13-37
+92            android:parentActivityName="com.indev.library.MainMenuActivity"
+92-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:85:13-59
+93            android:screenOrientation="portrait" />
+93-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:86:13-49
+94        <activity
+94-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:87:9-91:51
+95            android:name="com.indev.library.BookIssueListActivity"
+95-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:88:13-50
+96            android:exported="false"
+96-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:89:13-37
+97            android:parentActivityName="com.indev.library.MainMenuActivity"
+97-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:90:13-59
+98            android:screenOrientation="portrait" />
+98-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:91:13-49
+99        <activity
+99-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:92:9-96:51
+100            android:name="com.indev.library.AddReceiverActivity"
+100-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:93:13-48
+101            android:exported="false"
+101-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:94:13-37
+102            android:parentActivityName="com.indev.library.BookReceiverListActivity"
+102-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:95:13-67
+103            android:screenOrientation="portrait" />
+103-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:96:13-49
+104        <activity
+104-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:97:9-101:51
+105            android:name="com.indev.library.AddIssueActivity"
+105-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:98:13-45
+106            android:exported="false"
+106-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:99:13-37
+107            android:parentActivityName="com.indev.library.BookIssueListActivity"
+107-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:100:13-64
+108            android:screenOrientation="portrait" />
+108-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:101:13-49
+109        <activity
+109-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:102:9-106:51
+110            android:name="com.indev.library.SubscriberListActivity"
+110-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:103:13-51
+111            android:exported="false"
+111-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:104:13-37
+112            android:parentActivityName="com.indev.library.MainMenuActivity"
+112-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:105:13-59
+113            android:screenOrientation="portrait" />
+113-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:106:13-49
+114        <activity
+114-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:107:9-111:51
+115            android:name="com.indev.library.BookListActivity"
+115-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:108:13-45
+116            android:exported="false"
+116-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:109:13-37
+117            android:parentActivityName="com.indev.library.MainMenuActivity"
+117-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:110:13-59
+118            android:screenOrientation="portrait" />
+118-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:111:13-49
+119        <activity
+119-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:112:9-121:20
+120            android:name="com.indev.library.SplashScreenActivity"
+120-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:113:13-49
+121            android:exported="true"
+121-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:114:13-36
+122            android:screenOrientation="portrait" >
+122-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:115:13-49
+123            <intent-filter>
+123-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:116:13-120:29
+124                <action android:name="android.intent.action.MAIN" />
+124-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:117:17-69
+124-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:117:25-66
+125
+126                <category android:name="android.intent.category.LAUNCHER" />
+126-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:119:17-77
+126-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:119:27-74
+127            </intent-filter>
+128        </activity>
+129        <activity
+129-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:122:9-126:51
+130            android:name="com.indev.library.AddSubscribeActivity"
+130-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:123:13-49
+131            android:exported="false"
+131-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:124:13-37
+132            android:parentActivityName="com.indev.library.SubscriberListActivity"
+132-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:125:13-65
+133            android:screenOrientation="portrait" />
+133-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:126:13-49
+134        <activity
+134-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:127:9-131:51
+135            android:name="com.indev.library.AddBookNameActivity"
+135-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:128:13-48
+136            android:exported="false"
+136-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:129:13-37
+137            android:parentActivityName="com.indev.library.BookListActivity"
+137-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:130:13-59
+138            android:screenOrientation="portrait" />
+138-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:131:13-49
+139        <activity
+139-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:132:9-135:51
+140            android:name="com.indev.library.MainMenuActivity"
+140-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:133:13-45
+141            android:exported="false"
+141-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:134:13-37
+142            android:screenOrientation="portrait" />
+142-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:135:13-49
+143        <activity
+143-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:136:9-139:51
+144            android:name="com.indev.library.LoginActivity"
+144-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:137:13-42
+145            android:exported="false"
+145-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:138:13-37
+146            android:screenOrientation="portrait" />
+146-->C:\Users\USER\AndroidStudioProjects\library-JBF\app\src\main\AndroidManifest.xml:139:13-49
+147
+148        <provider
+148-->[com.squareup.picasso:picasso:2.71828] C:\Users\USER\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+149            android:name="com.squareup.picasso.PicassoProvider"
+149-->[com.squareup.picasso:picasso:2.71828] C:\Users\USER\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+150            android:authorities="com.indev.library.com.squareup.picasso"
+150-->[com.squareup.picasso:picasso:2.71828] C:\Users\USER\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+151            android:exported="false" />
+151-->[com.squareup.picasso:picasso:2.71828] C:\Users\USER\.gradle\caches\transforms-3\44e639e24f81b34ba8acf09cd321efeb\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+152        <provider
+152-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+153            android:name="androidx.startup.InitializationProvider"
+153-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+154            android:authorities="com.indev.library.androidx-startup"
+154-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+155            android:exported="false" >
+155-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+156            <meta-data
+156-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+157                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+157-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+158                android:value="androidx.startup" />
+158-->[androidx.emoji2:emoji2:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+159            <meta-data
+159-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\USER\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+160                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+160-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\USER\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+161                android:value="androidx.startup" />
+161-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\USER\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+162        </provider>
+163    </application>
+164
+165</manifest>

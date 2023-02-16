@@ -69,7 +69,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
     Button alldataSubmit;
     RadioGroup rg_gender;
     RadioButton rb_male,rb_female;
-   EditText et_name,et_date_of_birth,et_profession,et_address,et_mobile_no,et_email;
+   EditText et_name,et_date_of_birth,et_profession,et_address,et_mobile_no,et_email,et_roll_no;
    Spinner sp_category,sp_district,sp_block,sp_village;
    SqliteDatabase sqliteDatabase;
    SubscriberPojo subscriberPojo;
@@ -213,8 +213,8 @@ public class AddSubscribeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (checkValidation()) {
                     subscriberPojo = new SubscriberPojo();
-                    String resource_uniue_id="S"+ CommonClass.getUUID();
-                    subscriberPojo.setSubscriber_unique_id(resource_uniue_id);
+//                    String resource_uniue_id="S"+ CommonClass.getUUID();
+                    subscriberPojo.setSubscriber_unique_id(et_roll_no.getText().toString().trim());
                     subscriberPojo.setSubscriber_name(et_name.getText().toString().trim());
                     subscriberPojo.setSubscriber_image(base64);
                     subscriberPojo.setGender(st_gender);
@@ -309,6 +309,7 @@ public class AddSubscribeActivity extends AppCompatActivity {
         et_mobile_no=findViewById(R.id.et_mobile_no);
         rg_gender=findViewById(R.id.rg_gender);
         rb_male=findViewById(R.id.rb_male);
+        et_roll_no=findViewById(R.id.et_roll_no);
         rb_female=findViewById(R.id.rb_female);
         categoryArrayList=new ArrayList<>();
 
@@ -429,6 +430,13 @@ private boolean checkValidation() {
         String msg = getString(R.string.please_enter_address);
         et_address.setError(msg);
         et_address.requestFocus();
+        return false;
+    }
+    if (et_roll_no.getText().toString().trim().equalsIgnoreCase("")){
+        EditText flagEditfield = et_roll_no;
+        String msg = getString(R.string.please_enter_roll_no);
+        et_roll_no.setText(msg);
+        et_roll_no.requestFocus();
         return false;
     }
 
